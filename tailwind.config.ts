@@ -8,7 +8,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,8 +19,9 @@ const config = {
       },
     },
     extend: {
-      fontFamily:{
-        sans: ["var(--font-sans)", ...fontFamily.sans]
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        zain: ['Zain', ...fontFamily.sans]
       },
       fontSize: {
         base: '1.125rem'

@@ -7,8 +7,8 @@ import { MainNav } from "./main-nav";
 
 export function SiteHeader() {
   return (
-    <header className="z-10 sticky top-0 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+    <header className="px-4 lg:px-16 xl:px-32 2xl:px-44 fixed w-full backdrop-blur-[2px] bg-gradient-to-gray-50 bg-gradient-to-b from-gray-100 to-gray-100/0 z-20 py-4 border-b-gray-300/10 border-b">
+      <div className="container flex h-14 max-w-screen-3xl items-center">
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center">
