@@ -20,7 +20,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0 hidden sm:inline-flex"
+                  "w-10 px-0 sm:inline-flex"
                 )}
               >
                 <Icons.gitHub className="h-5 w-5" />
@@ -35,7 +35,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost" }),
-                  "w-10 px-0 hidden sm:inline-flex"
+                  "w-10 px-0 sm:inline-flex"
                 )}
               >
                 <Icons.twitter className="h-4 w-4" />

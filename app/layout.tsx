@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/header";
 import { SiteFooter } from "@/components/footer";
+import { BgforCirle } from "@/components/bgCircle";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         inter.variable
       )}>
         <div className="relative flex min-h-dvh flex-col bg-background custom-gradient">
+          <BgforCirle />
           <SiteHeader />
           <main className="flex-1 pt-20 p-5">{children}</main>
           <SiteFooter />
