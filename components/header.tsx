@@ -3,7 +3,7 @@ import { Icons } from "./icons";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { MainNav } from "./main-nav";
+import { MainNav } from "./mainNav";
 
 export function SiteHeader() {
   return (
