@@ -13,7 +13,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "3rem",
       screens: {
         "2xl": "1400px",
       },
@@ -21,6 +21,9 @@ const config = {
     extend: {
       fontFamily:{
         sans: ["var(--font-sans)", ...fontFamily.sans]
+      },
+      fontSize: {
+        base: '1.125rem'
       },
       colors: {
         border: "hsl(var(--border))",
