@@ -1,4 +1,4 @@
-export function BgforCirle(){
+export function BgforCircle(){
   return (
     <>
       <div className="absolute z-0 w-screen h-screen flex justify-center items-center">
