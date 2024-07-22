@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/header";
 import { SiteFooter } from "@/components/footer";
-import { BgforCirle } from "@/components/bgCircle";
+import { BgforCirle } from "@/components/bgcircle";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
