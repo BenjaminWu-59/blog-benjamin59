@@ -24,9 +24,11 @@ export default function RootLayout({
       )}>
         <div className="relative flex min-h-dvh flex-col bg-background">
           <SiteHeader />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pt-20 p-5">
+            {children}
+          </main>
         </div>
       </body>
-    </html> 
+    </html>
   );
 }
