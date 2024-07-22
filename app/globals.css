@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 .custom-gradient {
-  background: rgb(252,252,252);
-  background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgba(252,249,249,1) 29%, rgba(236,236,236,1) 50%, rgba(244,244,244,1) 70%, rgba(255,255,255,1) 100%);
+  background: rgb(254,254,254);
+  background: linear-gradient(0deg, rgba(254,254,254,1) 0%, rgba(247,247,247,1) 30%, rgba(233,233,233,1) 45%, rgba(233,233,233,1) 57%, rgba(249,249,249,1) 100%);
 }
 
 @layer base {

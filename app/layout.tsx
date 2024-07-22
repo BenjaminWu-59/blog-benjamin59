@@ -23,7 +23,7 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         inter.variable
       )}>
-        <div className="relative flex min-h-dvh flex-col bg-background custom-gradient border border-red-500">
+        <div className="relative flex min-h-dvh flex-col bg-background custom-gradient">
           <SiteHeader />
           <main className="flex-1 pt-20 p-5">{children}</main>
           <SiteFooter />
