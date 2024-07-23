@@ -75,5 +75,10 @@
   background: linear-gradient(0deg, rgba(254,254,254,1) 0%, rgba(247,247,247,1) 30%, rgba(233,233,233,1) 45%, rgba(233,233,233,1) 57%, rgba(249,249,249,1) 100%);
 }
 
+.gray-gradient{
+  background: rgb(255,255,255);
+background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 54%, rgba(233,233,233,1) 76%, rgba(230,230,230,1) 100%);
+}
+
 
 @import '@/style/custom-style.css'; 
