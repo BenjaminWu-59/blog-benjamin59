@@ -21,7 +21,7 @@ export function MainNav() {
           pathname === "/blog" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        Blog
+        Project
       </Link>
       <Link
         href="/"
@@ -30,7 +30,43 @@ export function MainNav() {
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        About
+        Blogs
+      </Link>
+      <Link
+        href="/"
+        className={cn(
+          "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
+          pathname === "/about" ? "text-foreground" : "text-foreground/60"
+        )}
+      >
+        Code
+      </Link>
+      <Link
+        href="/"
+        className={cn(
+          "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
+          pathname === "/about" ? "text-foreground" : "text-foreground/60"
+        )}
+      >
+        Music
+      </Link>
+      <Link
+        href="/"
+        className={cn(
+          "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
+          pathname === "/about" ? "text-foreground" : "text-foreground/60"
+        )}
+      >
+        Fitness
+      </Link>
+      <Link
+        href="/"
+        className={cn(
+          "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
+          pathname === "/about" ? "text-foreground" : "text-foreground/60"
+        )}
+      >
+        LOL
       </Link>
     </nav>
   );
