@@ -4,7 +4,7 @@ import { testArticleData } from "@/config/articles";
 export default function Home() {
   return (
     <>
-      <section className="p-10 mb-10 mt-20">
+      <section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
         <div className="flex items-center justify-center">
           <div className="z-10 p-10 rounded-3xl gray-gradient">
             <p className="text-xl font-bold">My name is:</p>

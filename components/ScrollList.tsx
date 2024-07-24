@@ -7,7 +7,7 @@ interface ScrollListProps {
 
 const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
   return (
-    <div className="as-scroll-container overflow-hidden">
+    <div className="as-scroll-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
       <section className="flex as-scroll-animate" style={{ minWidth: "100%" }}>
         {items.map((item, index) => (
           <div key={index} className="w-80 m-5 flex-grow rounded-3xl cursor-pointer" style={{
