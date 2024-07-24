@@ -10,12 +10,14 @@ const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
     <div className="as-scroll-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
       <section className="flex as-scroll-animate" style={{ minWidth: "100%" }}>
         {items.map((item, index) => (
-          <div key={index} className="w-80 m-5 flex-grow rounded-3xl cursor-pointer" style={{
-            backgroundColor: 'rgb(242,238,243)',
-            background: 'linear-gradient(120deg, rgba(242,238,243,1) 0%, rgba(241,236,243,1) 43%, rgba(235,221,240,1) 71%, rgba(228,209,235,1) 100%)'
+          <div key={index} className="w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
+            backgroundColor: item.backgroundColor,
+            background: item.background
           }}>
-            <p className="py-3 font-black text-2xl">{item.title}</p>
-            <p>{item.description}</p>
+            <p className="py-3 text-2xl font-bold">{item.title}</p>
+            <p className="text-muted-foreground">
+              {item.description}
+            </p>
             <div className="flex justify-between items-center">
               <div>
                 日历
@@ -30,12 +32,14 @@ const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
       </section>
       <section className="flex as-scroll-animate" style={{ minWidth: "100%" }} aria-hidden="true">
         {items.map((item, index) => (
-          <div key={index} className="w-80 m-5 flex-grow rounded-3xl cursor-pointer" style={{
-            backgroundColor: 'rgb(242,238,243)',
-            background: 'linear-gradient(120deg, rgba(242,238,243,1) 0%, rgba(241,236,243,1) 43%, rgba(235,221,240,1) 71%, rgba(228,209,235,1) 100%)'
+          <div key={index} className="w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
+            backgroundColor: item.backgroundColor,
+            background: item.background
           }}>
-            <p className="py-3 font-black text-2xl">{item.title}</p>
-            <p>{item.description}</p>
+            <p className="py-3 text-2xl font-bold">{item.title}</p>
+            <p className="text-muted-foreground">
+              {item.description}
+            </p>
             <div className="flex justify-between items-center">
               <div>
                 日历
