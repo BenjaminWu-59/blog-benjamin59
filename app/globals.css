@@ -84,10 +84,21 @@ background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 
 @import '@/style/custom-style.css'; 
 
 /* components/CarouselList.module.css */
-.as-scroll{
+.as-scroll-container{
+  display:flex;
+  overflower: hidden
+}
+
+.as-scroll-animate{
   will-change: transform;
   animation:loop-scroll 40s linear infinite;
 }
+
+.as-scroll-container:hover .as-scroll-animate{
+  animation-play-state: paused;
+  cursor: point;
+}
+
 
 @keyframes loop-scroll{
   from {

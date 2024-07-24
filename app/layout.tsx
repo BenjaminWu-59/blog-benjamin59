@@ -27,7 +27,7 @@ export default function RootLayout({
         <div className="relative flex min-h-dvh flex-col bg-background custom-gradient">
           <BgforCircle />
           <SiteHeader />
-          <main>{children}</main>
+          <main className="z-10">{children}</main>
           <SiteFooter />
         </div>
       </body>

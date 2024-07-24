@@ -1,14 +1,7 @@
 import ScrollList from "@/components/ScrollList";
+import { testArticleData } from "@/config/articles";
 
 export default function Home() {
-
-  const items = [
-    { title: '文章1', content: 'write something' },
-    { title: '文章2', content: 'write something' },
-    { title: '文章3', content: 'write something' },
-    { title: '文章4', content: 'write something' }
-  ];
-
   return (
     <>
       <section className="p-10 mb-10 mt-20">
@@ -30,7 +23,7 @@ export default function Home() {
       </ section>
 
       <section>
-         <ScrollList items={items} />
+         <ScrollList items={testArticleData} />
       </section>
     </>
   );
