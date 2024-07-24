@@ -24,11 +24,11 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         inter.variable
       )}>
-        <div className="relative flex min-h-dvh flex-col bg-background custom-gradient">
-          <BgforCircle />
+        <div className="flex min-h-dvh flex-col bg-background">
           <SiteHeader />
           <main className="z-10">{children}</main>
           <SiteFooter />
+          <BgforCircle />
         </div>
       </body>
     </html>
