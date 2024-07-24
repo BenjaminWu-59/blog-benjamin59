@@ -4,9 +4,9 @@ import { Icons } from "./icons";
 
 export function SiteFooter() {
   return (
-    <footer className="my-10  pt-2 text-center font-zain text-lg text-gray-400/100 border-gray-300/20 border">
+    <footer className="w-full h-20 fixed left-1/2 bottom-0 transform -translate-x-1/2 -translate-y-1/2 my-10 pt-2 text-center font-zain text-lg text-gray-400/100 border-gray-300/20 border">
       <div className="text-xl font-zain font-bold">
-        Benjamin59 本杰明五九
+        Benjamin59 本杰明59
       </div>
       <div className="mb-2 mt-2 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">

@@ -1,16 +1,17 @@
+import ScrollList from "@/components/ScrollList";
+
 export default function Home() {
 
-  let test: string[] = [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5'
-  ]
+  const items = [
+    { title: '文章1', content: 'write something' },
+    { title: '文章2', content: 'write something' },
+    { title: '文章3', content: 'write something' },
+    { title: '文章4', content: 'write something' }
+  ];
 
   return (
     <>
-      <section className="p-10 mb-10 mt-10">
+      <section className="p-10 mb-10 mt-20">
         <div className="flex items-center justify-center">
           <div className="z-10 p-10 rounded-3xl gray-gradient">
             <p className="text-xl font-bold">My name is:</p>
@@ -28,60 +29,9 @@ export default function Home() {
         </div>
       </ section>
 
-      <div className="flex overflow-hidden border">
-        <section className="flex as-scroll" style={{ minWidth: "100%" }}>
-          <div className="m-5 flex-grow text-center gray-gradient">
-            文章1
-            <p>
-              write somthing
-            </p>
-          </div>
-          <div className="m-5 flex-grow text-center gray-gradient">
-            文章2
-            <p>
-              write somthing
-            </p>
-          </div>
-          <div className="m-5 flex-grow text-center gray-gradient">
-            文章3
-            <p>
-              write somthing
-            </p>
-          </div>
-          <div className="m-5 flex-grow text-center gray-gradient">
-            文章4
-            <p>
-              write somthing
-            </p>
-          </div>
-        </section>
-        <section className="flex as-scroll" style={{ minWidth: "100%" }} aria-hidden="true">
-        <div className="m-5 flex-grow text-center gray-gradient">
-            文章1
-            <p>
-              write somthing
-            </p>
-          </div>
-          <div className="m-5 flex-grow text-center gray-gradient">
-            文章2
-            <p>
-              write somthing
-            </p>
-          </div>
-          <div className="m-5 flex-grow text-center gray-gradient">
-            文章3
-            <p>
-              write somthing
-            </p>
-          </div>
-          <div className="m-5 flex-grow text-center gray-gradient">
-            文章4
-            <p>
-              write somthing
-            </p>
-          </div>
-        </section>
-      </div>
+      <section>
+         <ScrollList items={items} />
+      </section>
     </>
   );
 }
