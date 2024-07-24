@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </ section>
 
-      <section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 py-20 md:py-48">
+      <section className="px-20">
         <p className="relative inline-block text-2xl font-medium pb-1 px-1 rounded-lg bg-gradient-to-r from-orange-300 to-orange-300 text-black dark:text-white">
           Here are some of the articles I wrote, including technical articles, essays, etc.
         </p>

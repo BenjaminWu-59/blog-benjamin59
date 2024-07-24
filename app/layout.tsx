@@ -25,10 +25,10 @@ export default function RootLayout({
         inter.variable
       )}>
         <div className="flex min-h-dvh flex-col bg-background">
+          <BgforCircle />
           <SiteHeader />
           <main className="z-10">{children}</main>
           <SiteFooter />
-          <BgforCircle />
         </div>
       </body>
     </html>

@@ -10,7 +10,7 @@ const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
     <div className="as-scroll-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
       <section className="flex as-scroll-animate" style={{ minWidth: "100%" }}>
         {items.map((item, index) => (
-          <div key={index} className="w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
+          <div key={index} className="z-10 w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
             backgroundColor: item.backgroundColor,
             background: item.background
           }}>
@@ -32,7 +32,7 @@ const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
       </section>
       <section className="flex as-scroll-animate" style={{ minWidth: "100%" }} aria-hidden="true">
         {items.map((item, index) => (
-          <div key={index} className="w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
+          <div key={index} className="z-10 w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
             backgroundColor: item.backgroundColor,
             background: item.background
           }}>
