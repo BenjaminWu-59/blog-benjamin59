@@ -1,5 +1,6 @@
 import { BlogPost } from '@/config/articles';
 import React from 'react';
+import Image from "next/image";
 
 interface ScrollListProps {
   items: BlogPost[];
@@ -10,18 +11,26 @@ const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
     <div className="as-scroll-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
       <section className="flex as-scroll-animate" style={{ minWidth: "100%" }}>
         {items.map((item, index) => (
-          <div key={index} className="z-10 w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
+          <div key={index} className="z-10 w-96 m-5 px-4 flex-grow rounded-3xl cursor-pointer border border-border flex flex-col" style={{
             backgroundColor: item.backgroundColor,
             background: item.background
           }}>
             <p className="py-3 text-2xl font-bold">{item.title}</p>
+            <hr className="pt-4 border-black-3" />
             <p className="text-muted-foreground">
               {item.description}
             </p>
-            <div className="flex justify-between items-center">
-              <div>
-                日历
-                <p>{item.createdAt}</p>Ï
+            <div className="py-2 flex justify-between items-center mt-auto">
+              <div className="flex items-center">
+                <Image
+                  src="/calender.svg"
+                  alt="Calender"
+                  className="dark:invert pr-1"
+                  width={15}
+                  height={15}
+                  priority
+                />
+                <p>{item.createdAt}</p>
               </div>
               <div>
                 {`read more ->`}
@@ -32,18 +41,26 @@ const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
       </section>
       <section className="flex as-scroll-animate" style={{ minWidth: "100%" }} aria-hidden="true">
         {items.map((item, index) => (
-          <div key={index} className="z-10 w-96 m-5 px-3 flex-grow rounded-3xl cursor-pointer border border-border" style={{
+          <div key={index} className="z-10 w-96 h-72 m-5 px-4 flex-grow rounded-3xl cursor-pointer border border-border flex flex-col" style={{
             backgroundColor: item.backgroundColor,
             background: item.background
           }}>
             <p className="py-3 text-2xl font-bold">{item.title}</p>
+            <hr className="pt-4 border-black-3" />
             <p className="text-muted-foreground">
               {item.description}
             </p>
-            <div className="flex justify-between items-center">
-              <div>
-                日历
-                <p>{item.createdAt}</p>Ï
+            <div className="py-2 flex justify-between items-center mt-auto">
+              <div className="flex items-center">
+                <Image
+                  src="/calender.svg"
+                  alt="Calender"
+                  className="dark:invert pr-1"
+                  width={15}
+                  height={15}
+                  priority
+                />
+                <p>{item.createdAt}</p>
               </div>
               <div>
                 {`read more ->`}
