@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="w-full h-20 my-32 pt-2 text-center font-zain text-lg text-gray-400/100 border-gray-300/20 border">
       <div className="text-xl font-zain font-bold">
-        Benjamin59 本杰明59
+        Benjamin59 本无酒
       </div>
       <div className="mb-2 mt-2 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
