@@ -11,58 +11,58 @@ export const testSkillList: Skill[] = [
     duaration: "+5 years"
   },
   {
-    icon: "js",
+    icon: "ts",
     skill: "TypeScript",
     duaration: "+3 years"
   },
   {
-    icon: "js",
+    icon: "nodejs",
     skill: "Node.js",
     duaration: "+4 years"
   },
   {
-    icon: "js",
+    icon: "react",
     skill: "React",
     duaration: "+2 years"
   },
   {
-    icon: "js",
+    icon: "vue",
+    skill: "Vue.js",
+    duaration: "+3 years"
+  },
+  {
+    icon: "nestjs",
     skill: "Nestjs",
     duaration: "+2 years"
   },
   {
-    icon: "js",
+    icon: "nextjs",
     skill: "Nextjs",
     duaration: "+1 years"
   },
   {
-    icon: "js",
+    icon: "tailwindcss",
     skill: "TailWind CSS",
     duaration: "+2 years"
   },
   {
-    icon: "js",
+    icon: "github",
     skill: "GitHub",
     duaration: "+4 years"
   },
   {
-    icon: "js",
+    icon: "mysql",
     skill: "MySQL",
     duaration: "+4 years"
   },
   {
-    icon: "js",
+    icon: "postgresql",
     skill: "PostgreSQL",
     duaration: "+1 years"
   },
   {
-    icon: "js",
+    icon: "debian",
     skill: "Linux",
     duaration: "+2 years"
-  },
-  {
-    icon: "js",
-    skill: "Vue.js",
-    duaration: "+3 years"
   }
 ]

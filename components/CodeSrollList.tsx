@@ -14,7 +14,7 @@ const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
           <div key={index} className="m-2 px-5 py-10 flex flex-col justify-center items-center rounded-3xl cursor-pointer border border-border">
             <div className="p-3">
               <Image
-                src="/js.svg"
+                src={`/` + item.icon + `.svg`}
                 alt="JS"
                 className="dark:invert pr-1"
                 width={60}
