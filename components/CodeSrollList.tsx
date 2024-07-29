@@ -11,7 +11,12 @@ const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
     <>
       <div className="grid grid-cols-4 gap-4">
         {skill.map((item, index) => (
-          <div key={index} className="m-2 px-5 py-10 flex flex-col justify-center items-center rounded-3xl cursor-pointer border border-border">
+          <div key={index} className="m-2 px-5 py-10 
+          flex flex-col justify-center items-center 
+          rounded-3xl cursor-pointer border border-border 
+          relative group overflow-hidden
+          hover:scale-105 transform transition-transform duration-500
+          ">
             <div className="p-3">
               <Image
                 src={`/` + item.icon + `.svg`}
@@ -22,8 +27,21 @@ const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
                 priority
               />
             </div>
-            <div className="font-semibold">{item.skill}</div>
-            <div>{item.duaration}</div>
+            <div className="py-4 text-2xl font-semibold">
+              {item.skill}
+            </div>
+            <div className="font-medium text-yellow-600">
+              {item.duaration}
+            </div>
+            {/* overlay section */}
+            <div className="absolute left-0 top-[-50%] opacity-0 flex justify-center items-center
+                 group-hover:top-[0] p-5 w-full h-full
+                 group-hover:opacity-100 bg-black/60 rounded-3xl
+                 group-hover:backdrop-blur-sm duration-500">
+              <p className="font-sans font-medium text-lg text-slate-100">
+                {item.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
