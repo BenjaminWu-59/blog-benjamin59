@@ -4,8 +4,8 @@ export const siteConfig = {
   description: "...",
   author: "Benjamin59",
   links: {
-    x:"https://www.x.com",
-    github: "https://www.github.com"
+    x:"https://x.com/benjamin_qiang",
+    github: "https://github.com/BenjaminWu-59"
   }
 }
 

@@ -9,7 +9,7 @@ interface SkillListProps {
 const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
   return (
     <>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-6 gap-6">
         {skill.map((item, index) => (
           <div key={index} className="m-2 px-5 py-10 
           flex flex-col justify-center items-center 
