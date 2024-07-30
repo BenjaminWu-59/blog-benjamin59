@@ -15,7 +15,7 @@ export function MainNav() {
         <span className="text-3xl font-zain font-bold text-foreground/80">{siteConfig.name}</span>
       </Link>
       <Link
-        href="/"
+        href="#blogs"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/blog" ? "text-foreground" : "text-foreground/60"
@@ -24,13 +24,13 @@ export function MainNav() {
         Blogs
       </Link>
       <Link
-        href="/"
+        href="#skills"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        Code
+        Skills
       </Link>
       <Link
         href="/"

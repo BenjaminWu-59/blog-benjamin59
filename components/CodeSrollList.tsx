@@ -11,7 +11,7 @@ const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
     <>
       <div className="grid grid-cols-4 gap-3">
         {skill.map((item, index) => (
-          <div key={index} className="z-10 m-2 px-5 py-10 min-w-200
+          <div key={index} className="z-10 m-2 px-5 py-8 min-w-200
           flex flex-col justify-center items-center 
           rounded-3xl cursor-pointer border border-border 
           relative group overflow-hidden
