@@ -79,6 +79,9 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         }
+      },
+      minWidth:{
+        '200': '200px'
       }
     },
   },
