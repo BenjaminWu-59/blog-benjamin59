@@ -1,6 +1,8 @@
 import SkillList from "@/components/CodeSrollList";
+import ProjectList from "@/components/ProjectList";
 import ScrollList from "@/components/ScrollList";
 import { testArticleData } from "@/config/articles";
+import { testProjectList } from "@/config/projects";
 import { testSkillList } from "@/config/skills"; 
 
 export default function Home() {
@@ -24,7 +26,7 @@ export default function Home() {
         </div>
       </ section>
 
-      <section id="blogs" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-36">
+      <section id="blogs" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-32">
         <p className="relative inline-block text-2xl font-medium pb-1 px-1 rounded-lg bg-gradient-to-r from-orange-300 to-orange-300 text-black dark:text-white">
           Here are some of the articles I wrote, including technical articles, essays, etc.
         </p>
@@ -33,6 +35,10 @@ export default function Home() {
 
       <section id="skills" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-32">
         <SkillList skill={testSkillList}/>
+      </section>
+
+      <section id="project" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-32">
+         <ProjectList project={testProjectList}/>
       </section>
 
       <section className="w-full px-4 lg:px-14 xl:px-28 2xl:px-40 relative z-10 my-36"

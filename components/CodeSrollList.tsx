@@ -1,7 +1,6 @@
 import { Skill } from "@/config/skills";
 import Image from "next/image";
 
-
 interface SkillListProps {
   skill: Skill[];
 }
