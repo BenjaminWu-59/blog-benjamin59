@@ -37,7 +37,7 @@ export default function Home() {
         <SkillList skill={testSkillList}/>
       </section>
 
-      <section id="project" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-32">
+      <section id="project" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-28">
          <ProjectList project={testProjectList}/>
       </section>
 

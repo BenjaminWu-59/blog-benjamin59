@@ -106,3 +106,8 @@ background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 
     transform: translateX(0);
   }
 }
+
+/* shadow custom */
+.shadow-custom{
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, .12);
+}
