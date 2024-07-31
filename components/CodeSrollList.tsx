@@ -8,9 +8,9 @@ interface SkillListProps {
 const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
   return (
     <>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-6 gap-2">
         {skill.map((item, index) => (
-          <div key={index} className="z-10 m-2 px-5 py-8 min-w-200
+          <div key={index} className="z-10 m-2 px-5 py-8 min-w-100
           flex flex-col justify-center items-center 
           rounded-3xl cursor-pointer border border-border 
           relative group overflow-hidden
@@ -37,7 +37,7 @@ const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
                  group-hover:top-[0] p-5 w-full h-full
                  group-hover:opacity-100 bg-black/60 rounded-3xl
                  group-hover:backdrop-blur-sm duration-500">
-              <p className="font-sans font-medium text-lg text-slate-100">
+              <p className="font-sans font-medium text-slate-100">
                 {item.description}
               </p>
             </div>

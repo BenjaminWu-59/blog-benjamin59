@@ -3,7 +3,7 @@ import ProjectList from "@/components/ProjectList";
 import ScrollList from "@/components/ScrollList";
 import { testArticleData } from "@/config/articles";
 import { testProjectList } from "@/config/projects";
-import { testSkillList } from "@/config/skills"; 
+import { testSkillList } from "@/config/skills";
 
 export default function Home() {
   return (
@@ -34,20 +34,20 @@ export default function Home() {
       </section>
 
       <section id="skills" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-32">
-        <SkillList skill={testSkillList}/>
+        <SkillList skill={testSkillList} />
       </section>
 
       <section id="projects" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-28">
-         <ProjectList project={testProjectList}/>
+        <ProjectList project={testProjectList} />   
       </section>
 
       <section className="w-full px-4 lg:px-14 xl:px-28 2xl:px-40 relative z-10 my-36"
         style={{
-          opacity: "1", 
+          opacity: "1",
           transform: "none"
         }}
       >
-         <p className="text-2xl md:text-4xl max-w-5xl"> 
+        <p className="text-2xl md:text-4xl max-w-5xl">
           I am looking for a remote job, so I created this website to showcase some information. If you are interested in me, please feel free to contact me.
         </p>
       </section>
