@@ -1,4 +1,5 @@
 import SkillList from "@/components/CodeSrollList";
+import FitnessList from "@/components/FitnessList";
 import ProjectList from "@/components/ProjectList";
 import ScrollList from "@/components/ScrollList";
 import { testArticleData } from "@/config/articles";
@@ -39,6 +40,10 @@ export default function Home() {
 
       <section id="projects" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-28">
         <ProjectList project={testProjectList} />   
+      </section>
+
+      <section id="projects" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-28">
+        <FitnessList />
       </section>
 
       <section className="w-full px-4 lg:px-14 xl:px-28 2xl:px-40 relative z-10 my-36"
