@@ -42,16 +42,7 @@ export function MainNav() {
         Projects
       </Link>
       <Link
-        href="/"
-        className={cn(
-          "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
-          pathname === "/about" ? "text-foreground" : "text-foreground/60"
-        )}
-      >
-        Music
-      </Link>
-      <Link
-        href="/"
+        href="#fitness"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
