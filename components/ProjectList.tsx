@@ -68,16 +68,16 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
         <div className="flex-grow ml-5 p-5 rounded-3xl grid grid-cols-2 gap-2 shadow-custom">
           {project.map((item, index) => (
             <div key={index}
-              className="z-10 m-2 min-w-300 min-h-250 
-                        flex justify-center items-center cursor-pointer
+              className="z-10 m-2 min-w-300 min-h-250 rounded-3xl shadow-custom
+                        flex justify-center items-center cursor-pointer 
                         relative group overflow-hidden
           ">
-              <div className="relative w-full h-full overflow-hidden rounded-3xl shadow-custom">
+              <div className="relative w-full h-full">
                 <div className="w-full h-full transition-transform duration-500 hover:scale-125">
                   <Image
                     src={`/${item.img}.jpg`}
                     alt="Project"
-                    className="object-cover"
+                    className="object-cover rounded-3xl"
                     fill
                     priority
                   />
@@ -88,10 +88,10 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
                  group-hover:p-5 w-full h-full
                  group-hover:opacity-85 bg-[#2D3849]/60 rounded-3xl
                  group-hover:backdrop-blur-sm duration-500 pointer-events-none">
-                  <p className="font-sans font-medium text-slate-100">
-                    {item.description}
-                  </p>
-                </div>
+                <p className="font-sans font-medium text-slate-100">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
