@@ -1,5 +1,13 @@
 import { Diet } from "@/config/fitness";
 import Image from "next/image";
+import * as React from "react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 interface FitnessListProps {
   diets: Diet[];
@@ -28,45 +36,55 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
           {/* 饮食和运动 */}
           <div className="flex-grow flex flex-col">
             {/* 饮食 */}
-            <div className="z-10 mb-5 p-3 grid grid-cols-3 gap-2 rounded-3xl shadow-custom">
-              {diets.map((item, index) => (
-                <div key={index}
-                  className="z-10 m-2 min-w-200 min-h-300 rounded-3xl shadow-custom-mid-drak
-                          flex justify-center items-center cursor-pointer
-                          relative group overflow-hidden
-            ">
-                  <div className="relative w-full h-full">
-                    <div className="w-full h-full transition-transform duration-500 hover:scale-125">
-                      <Image
-                        src={`/diet/${item.img}.png`}
-                        alt="Diet"
-                        className="object-cover rounded-3xl"
-                        fill
-                        priority
-                      />
-                    </div>
-                  </div>
-                  {/* overlay section */}
-                  <div className="absolute left-0 top-0 opacity-0 flex justify-center items-center
-                       group-hover:p-5 w-full h-full
-                       group-hover:opacity-85 bg-[#2D3849]/80 rounded-3xl
-                       group-hover:backdrop-blur-sm duration-500 pointer-events-none">
-                    <div className="text-sm font-sans font-medium text-slate-100">
-                      <p>
-                        Ingredients:{item.ingredients}
-                      </p>
-                      {item.descriptions.map((descs, index) => (
-                        <p key={index}>
-                          {descs}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="z-10 mb-5 flex">
+              <Carousel
+                opts={{
+                  align: "start",
+                }}
+                className="max-w-[500px] mx-20"
+              >
+                <CarouselContent>
+                  {diets.map((item, index) => (
+                    <CarouselItem key={index} className="flex justify-center items-center basis-1/2">
+                      <div className="w-[250px] h-[350px] flex flex-col justify-center items-center cursor-pointer rounded-3xl
+                                   relative group overflow-hidden">
+                        <div className="relative w-full h-full flex">
+                          <div className="w-full h-full transition-transform duration-500 hover:scale-125">
+                            <Image
+                              src={`/diet/${item.img}.png`}
+                              alt="Diet"
+                              className="object-cover rounded-3xl"
+                              fill
+                              priority
+                            />
+                          </div>
+                        </div>
+                        {/* overlay section */}
+                        <div className="absolute left-0 top-0 opacity-0 flex justify-center items-center
+                             group-hover:p-5 w-full h-full
+                             group-hover:opacity-85 bg-[#2D3849]/75 rounded-3xl
+                             group-hover:backdrop-blur-sm duration-500 pointer-events-none">
+                          <div className="text-sm font-sans font-medium text-slate-100">
+                            <p>
+                              Ingredients:{item.ingredients}
+                            </p>
+                            {item.descriptions.map((descs, index) => (
+                              <p key={index}>
+                                {descs}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
 
-              <div className="z-10 m-2 flex justify-center items-center rounded-3xl shadow-custom">
-                一些介绍
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              <div className="flex-grow flex justify-center items-center rounded-3xl shadow-custom">
+                diet intoduction
               </div>
             </div>
 
