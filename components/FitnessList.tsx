@@ -85,17 +85,24 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
               </Carousel>
               <div className="p-5 text-gray-50 flex-grow flex flex-col justify-center items-center rounded-3xl grayGradient">
                 <p className="whitespace-nowrap text-orange-400 text-4xl mb-2 font-bold">
-                   Daily Diet
+                  Daily Diet
                 </p>
                 <p className="text-gray-50">
-                This is the diet I usually eat, but it is not so strict. I often eat high-fat and high-salt foods with friends, about once a week.
+                  This is the diet I usually eat, but it is not so strict. I often eat high-fat and high-salt foods with friends, about once a week.
                 </p>
               </div>
             </div>
 
             {/* 运动 */}
             <div className="flex-grow p-5 rounded-3xl shadow-custom ">
-              sports
+              <Image
+                src={`/fitness/chest1.gif`}
+                alt="Fitness"
+                className="rounded-3xl"
+                width={200}
+                height={30}
+                priority
+              />
             </div>
           </div>
         </div>
