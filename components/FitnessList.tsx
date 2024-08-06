@@ -20,34 +20,43 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
       <div>
         <div className="flex">
           {/* 简介和其他 */}
-          <div className="flex flex-col w-3/12 mr-6">
-            <div className="mb-5 p-5 text-slate-100 rounded-3xl shadow-custom grayGradient">
+          {/* 
+            <div className="flex flex-col w-3/12 mr-6">
+              <div className="mb-5 p-5 text-slate-100 rounded-3xl shadow-custom grayGradient">
               <p className="p-2">This area mainly talks about my daily exercise</p>
               <p className="p-2">I think a healthy body is mainly divided into 3 parts: diet, exercise, and other (sleep, mood, etc.)</p>
               <p className="p-2">Diet is the most important thing, fitness is a gradual process, and good sleep and mood mainly depend on self-regulation</p>
             </div>
 
-            {/* 其他 */}
-            <div className="p-5 flex-grow rounded-3xl shadow-custom">
-              others: Work and rest and emotion
-            </div>
-          </div>
+             <div className="p-5 flex-grow rounded-3xl shadow-custom">
+               others: Work and rest and emotion
+              </div>
+            </div> 
+          */}
 
           {/* 饮食和运动 */}
-          <div className="flex-grow flex flex-col">
+          <div className="flex flex-col w-full">
             {/* 饮食 */}
             <div className="z-10 mb-5 py-5 pl-5 pr-10 flex rounded-3xl shadow-custom">
+              <div className="w-[35%]  p-5 text-gray-50 flex flex-col justify-center items-center rounded-3xl grayGradient">
+                <p className="whitespace-nowrap text-orange-400 text-4xl mb-2 font-bold">
+                  Daily Diet
+                </p>
+                <p className="text-gray-50">
+                  This is the diet I usually eat, but it is not so strict. I often eat high-fat and high-salt foods with friends, about once a week.
+                </p>
+              </div>
               <Carousel
                 opts={{
                   align: "start",
                 }}
-                className="max-w-[500px] mx-20"
+                className="w-[65%] flex-grow mx-20"
               >
                 <CarouselContent>
                   {diets.map((item, index) => (
-                    <CarouselItem key={index} className="flex justify-center items-center basis-1/2">
+                    <CarouselItem key={index} className="flex justify-center items-center basis-1/3">
                       <div className="w-[250px] h-[350px] flex flex-col justify-center items-center cursor-pointer rounded-3xl
-                                   relative group overflow-hidden">
+                                      relative group overflow-hidden">
                         <div className="relative w-full h-full flex">
                           <div className="w-full h-full transition-transform duration-500 hover:scale-125">
                             <Image
@@ -83,14 +92,6 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
                 <CarouselPrevious />
                 <CarouselNext />
               </Carousel>
-              <div className="p-5 text-gray-50 flex-grow flex flex-col justify-center items-center rounded-3xl grayGradient">
-                <p className="whitespace-nowrap text-orange-400 text-4xl mb-2 font-bold">
-                  Daily Diet
-                </p>
-                <p className="text-gray-50">
-                  This is the diet I usually eat, but it is not so strict. I often eat high-fat and high-salt foods with friends, about once a week.
-                </p>
-              </div>
             </div>
 
             {/* 运动 */}
@@ -99,8 +100,8 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
                 src={`/fitness/chest1.gif`}
                 alt="Fitness"
                 className="rounded-3xl"
-                width={200}
-                height={30}
+                width={250}
+                height={350}
                 priority
               />
             </div>
@@ -118,3 +119,4 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
 }
 
 export default FitnessList
+
