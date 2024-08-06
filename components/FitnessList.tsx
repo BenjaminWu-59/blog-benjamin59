@@ -21,7 +21,7 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
         <div className="flex">
           {/* 简介和其他 */}
           <div className="flex flex-col w-3/12 mr-6">
-            <div className="mb-5 p-5 text-slate-100 rounded-3xl shadow-custom bg-[#2D3849]">
+            <div className="mb-5 p-5 text-slate-100 rounded-3xl shadow-custom grayGradient">
               <p className="p-2">This area mainly talks about my daily exercise</p>
               <p className="p-2">I think a healthy body is mainly divided into 3 parts: diet, exercise, and other (sleep, mood, etc.)</p>
               <p className="p-2">Diet is the most important thing, fitness is a gradual process, and good sleep and mood mainly depend on self-regulation</p>
@@ -36,7 +36,7 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
           {/* 饮食和运动 */}
           <div className="flex-grow flex flex-col">
             {/* 饮食 */}
-            <div className="z-10 mb-5 flex">
+            <div className="z-10 mb-5 py-5 pl-5 pr-10 flex rounded-3xl shadow-custom">
               <Carousel
                 opts={{
                   align: "start",
@@ -83,13 +83,18 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
                 <CarouselPrevious />
                 <CarouselNext />
               </Carousel>
-              <div className="flex-grow flex justify-center items-center rounded-3xl shadow-custom">
-                diet intoduction
+              <div className="p-5 text-gray-50 flex-grow flex flex-col justify-center items-center rounded-3xl grayGradient">
+                <p className="whitespace-nowrap text-orange-400 text-4xl mb-2 font-bold">
+                   Daily Diet
+                </p>
+                <p className="text-gray-50">
+                This is the diet I usually eat, but it is not so strict. I often eat high-fat and high-salt foods with friends, about once a week.
+                </p>
               </div>
             </div>
 
             {/* 运动 */}
-            <div className="flex-grow p-5 rounded-3xl shadow-custom">
+            <div className="flex-grow p-5 rounded-3xl shadow-custom ">
               sports
             </div>
           </div>
