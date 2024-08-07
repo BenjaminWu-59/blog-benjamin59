@@ -1,4 +1,4 @@
-import { Diet, FitnessAction } from "@/config/fitness";
+import { Diet, FitnessAction, Book } from "@/config/fitness";
 import Image from "next/image";
 import * as React from "react"
 import {
@@ -12,17 +12,17 @@ import {
 interface FitnessListProps {
   diets: Diet[];
   fitnessActions: FitnessAction[];
+  books: Book[];
 }
 
 
-const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = [] }) => {
+const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = [], books = [] }) => {
   return (
     <>
       <div>
         <div className="flex">
           {/* 简介和其他 */}
-          {/* 
-            <div className="flex flex-col w-3/12 mr-6">
+          {/* <div className="flex flex-col w-3/12 mr-6">
               <div className="mb-5 p-5 text-slate-100 rounded-3xl shadow-custom grayGradient">
               <p className="p-2">This area mainly talks about my daily exercise</p>
               <p className="p-2">I think a healthy body is mainly divided into 3 parts: diet, exercise, and other (sleep, mood, etc.)</p>
@@ -32,8 +32,8 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = 
              <div className="p-5 flex-grow rounded-3xl shadow-custom">
                others: Work and rest and emotion
               </div>
-            </div> 
-          */}
+            </div>  */}
+
 
           {/* 饮食和运动 */}
           <div className="flex flex-col w-full">
@@ -137,19 +137,19 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = 
 
 
       {/* 书籍或网站推荐 */}
-      < div className="my-10 p-5 grid grid-cols-4 gap-2">
-        <a 
-          target="_blank"
-          rel="noreferrer"
-          className="book-container group relative block overflow-hidden rounded-xl bg-slate-50 p-8  shadow-md transition-all duration-500 hover:bg-slate-700"
-        >
+      < div className="my-10 grid grid-cols-4 gap-2">
+        {books.map((item, index) => (
+          <a
+            key={index}
+            target="_blank"
+            rel="noreferrer"
+            className="book-container group relative block overflow-hidden rounded-xl bg-slate-50 p-10 shadow-md transition-all duration-500 hover:bg-slate-700"
+          >
             <div className="book">
-              <img
-                alt=""
-                src="https://assets.literal.club/1/ckhfmlrks65720yabw5mlvs4i.jpg"
-              />
+              <img src={item.img} />
             </div>
-        </a>
+          </a>
+        ))}
       </div >
     </>
   )

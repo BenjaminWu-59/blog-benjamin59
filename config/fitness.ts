@@ -10,6 +10,11 @@ export interface FitnessAction {
   img: string;
   descriptions: string[];
 }
+export interface Book {
+  img: string;
+  projectName: string;
+  description: string
+}
 
 export const testDietList: Diet[] = [
   {
@@ -80,4 +85,12 @@ export const testFitnessActions: FitnessAction[] = [
     img: "chest2",
     descriptions: ["This is a fitness action for your shoulders."]
   }
+]
+
+export const testBookList: Book[] = [
+  {
+    img: "https://assets.literal.club/2/cktrnrk7q1209835yz7axkswyf0a.jpg",
+    projectName: "Bodyweight Strength Training Anatomy",
+    description: "this is a description, you can take a look at the book"
+  },
 ]
