@@ -143,7 +143,7 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = 
             key={index}
             target="_blank"
             rel="noreferrer"
-            className="book-container p-10 mr-5 mb-5 group relative block overflow-hidden rounded-xl bg-slate-50 shadow-md transition-all duration-500 hover:bg-slate-700"
+            className="book-container p-10 mr-5 mb-5 group relative block overflow-hidden rounded-xl bg-slate-50 shadow-md transition-all duration-500 hover:bg-[#063142]"
           >
             <div className="book">
               <img src={item.img} />
