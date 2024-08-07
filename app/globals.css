@@ -80,6 +80,14 @@
   background: linear-gradient(120deg, rgba(58,105,137,1) 0%, rgba(9,66,87,1) 100%);
 }
 
+/* self info card */
+.text-hover-color {
+  color: #063142;
+}
+
+.group-hover\\:opacity-100:hover .group-hover\\:opacity-100 {
+  opacity: 1;
+}
 
 @import '@/style/custom-style.css'; 
 
