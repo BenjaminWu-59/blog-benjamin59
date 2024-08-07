@@ -5,7 +5,7 @@ import ScrollList from "@/components/ScrollList";
 import { testArticleData } from "@/config/articles";
 import { testProjectList } from "@/config/projects";
 import { testSkillList } from "@/config/skills";
-import { testDietList } from "@/config/fitness";
+import { testDietList, testFitnessActions } from "@/config/fitness";
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
       </section>
 
       <section id="fitness" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-28">
-        <FitnessList diets={testDietList}/>
+        <FitnessList diets={testDietList} fitnessActions={testFitnessActions}/>
       </section>
 
       <section className="w-full px-4 lg:px-14 xl:px-28 2xl:px-40 relative z-10 my-36"

@@ -5,6 +5,12 @@ export interface Diet {
   ingredients: string;
 }
 
+export interface FitnessAction {
+  title: string;
+  img: string;
+  descriptions: string[];
+}
+
 export const testDietList: Diet[] = [
   {
     title: "Beef and Potato",
@@ -46,4 +52,32 @@ export const testDietList: Diet[] = [
     ],
     ingredients: "Beef, potatoes, cucumber, crab sticks"
   },
+]
+
+export const testFitnessActions: FitnessAction[] = [
+  {
+    title: "shouler1",
+    img: "shoulder1",
+    descriptions: ["This is a fitness action for your shoulders."]
+  },
+  {
+    title: "shouler2",
+    img: "shoulder2",
+    descriptions: ["This is a fitness action for your shoulders."]
+  },
+  {
+    title: "biceps1",
+    img: "biceps1",
+    descriptions: ["This is a fitness action for your shoulders."]
+  },
+  {
+    title: "chest1",
+    img: "chest1",
+    descriptions: ["This is a fitness action for your shoulders."]
+  },
+  {
+    title: "chest2",
+    img: "chest2",
+    descriptions: ["This is a fitness action for your shoulders."]
+  }
 ]

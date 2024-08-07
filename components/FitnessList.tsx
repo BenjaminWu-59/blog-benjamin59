@@ -1,4 +1,4 @@
-import { Diet } from "@/config/fitness";
+import { Diet, FitnessAction } from "@/config/fitness";
 import Image from "next/image";
 import * as React from "react"
 import {
@@ -11,10 +11,11 @@ import {
 
 interface FitnessListProps {
   diets: Diet[];
+  fitnessActions: FitnessAction[];
 }
 
 
-const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
+const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = [] }) => {
   return (
     <>
       <div>
@@ -85,7 +86,6 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
                           </div>
                         </div>
                       </div>
-
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -95,25 +95,62 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [] }) => {
             </div>
 
             {/* 运动 */}
-            <div className="flex-grow p-5 rounded-3xl shadow-custom ">
-              <Image
-                src={`/fitness/chest1.gif`}
-                alt="Fitness"
-                className="rounded-3xl"
-                width={250}
-                height={350}
-                priority
-              />
+            <div className="flex-grow p-5 flex justify-center rounded-3xl shadow-custom">
+              {fitnessActions.map((item, index) => (
+                <div key={index} className="w-[200px] h-[300px] p-5
+                                 flex justify-center items-center 
+                                 cursor-pointer rounded-3xl
+                                 relative group overflow-hidden">
+                  <div className="relative w-full h-full flex">
+                    <div className="w-full h-full transition-transform duration-500 hover:scale-125">
+                      <Image
+                        src={`/fitness/${item.img}.gif`}
+                        alt="Diet"
+                        className="object-cover rounded-3xl"
+                        fill
+                        priority
+                      />
+                    </div>
+                  </div>
+                  {/* overlay section */}
+                  <div className="absolute left-0 top-0 opacity-0 flex justify-center items-center
+                             group-hover:p-5 w-full h-full
+                             group-hover:opacity-85 bg-[#2D3849]/75 rounded-3xl
+                             group-hover:backdrop-blur-sm duration-500 pointer-events-none">
+                    <div className="text-sm font-sans font-medium text-slate-100">
+                      <p>
+                        Ingredients:{item.descriptions}
+                      </p>
+                      {item.descriptions.map((descs, index) => (
+                        <p key={index}>
+                          {descs}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+      </div >
 
 
-        {/* 书籍或网站推荐 */}
-        <div className="my-10 p-5 rounded-3xl shadow-custom">
-          书籍或网站推荐
-        </div>
-      </div>
+      {/* 书籍或网站推荐 */}
+      < div className="my-10 p-5 grid grid-cols-4 gap-2">
+        <a 
+          target="_blank"
+          rel="noreferrer"
+          className="book-container group relative block overflow-hidden rounded-xl bg-slate-50 p-8  shadow-md transition-all duration-500 hover:bg-slate-700"
+        >
+            <div className="book">
+              <img
+                alt=""
+                src="https://assets.literal.club/1/ckhfmlrks65720yabw5mlvs4i.jpg"
+              />
+            </div>
+        </a>
+      </div >
     </>
   )
 }
