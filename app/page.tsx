@@ -7,12 +7,14 @@ import { testArticleData } from "@/config/articles";
 import { testProjectList } from "@/config/projects";
 import { testSkillList } from "@/config/skills";
 import { testDietList, testFitnessActions, testBookList } from "@/config/fitness";
+import PersonalAnimate from "@/components/PersonalAnimate";
 
 
 export default function Home() {
   return (
     <>
       <section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-20 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
+        <PersonalAnimate />
         <PersonalCard />
       </ section>
 

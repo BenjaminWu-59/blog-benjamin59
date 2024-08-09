@@ -43,17 +43,17 @@ const PersonalCard = () => {
 
   return (
     <>
-      <div style={{ perspective: 2000 }} >
+      <div>
         <motion.div
           style={{ x, y, rotateX, rotateY, z: 100 }}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className="flex items-center justify-center cursor-pointer relative"
         >
-          <div className="z-10 p-10 rounded-3xl gray-gradient shadow-custom">
+          <div className="z-10 p-8 rounded-3xl gray-gradient shadow-custom">
             <p className="text-xl font-bold">My name is:</p>
             <p className="p-5 text-center text-4xl font-extrabold">Benjamin59</p>
-            <hr className="pt-5 border-t-3" />
+            <hr className="pt-5 border-t-3 border-black" />
             <p className="w-[240px] text-xl font-bold">I'm a:</p>
             <div className="my-5 flex flex-col items-end group">
               {intoductionList.map((item, index) => (
@@ -70,6 +70,8 @@ const PersonalCard = () => {
             </div>
           </div>
         </motion.div>
+
+        <div></div>
       </div>
     </>
   )
