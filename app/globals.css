@@ -70,6 +70,23 @@
   }
 }
 
+/* zoom effect */
+.zoom-in{
+  animation: scaleUp 0.5s ease-in-out forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: translateY(20px) scale(0.95); /* 初始状态，略微缩小并位移 */
+  }
+  100% {
+    transform: translateY(0) scale(1.05); /* 最终状态，放大并回到原位 */
+  }
+}
+
+
+/* gradient */
+
 .gray-gradient{
   background: rgb(255,255,255);
   background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 54%, rgba(233,233,233,1) 76%, rgba(230,230,230,1) 100%);

@@ -9,6 +9,7 @@ interface ProjectListProps {
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
+
   return (
     <>
       <div className="flex">
