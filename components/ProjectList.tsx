@@ -15,7 +15,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
         <div className="w-4/12 flex flex-col rounded-3xl">
           <div className="p-5 mb-7 flex flex-col items-center justify-center space-x-3 rounded-3xl shadow-custom grayGradient">
             <div className="flex items-center justify-center">
-              <Icons.logo className="mr-5 h-14 w-14 rounded-3xl" />
+              <Icons.logo className="mr-5 h-20 w-20 rounded-3xl" />
               <span className="text-5xl font-zain font-bold text-amber-600">
                 {siteConfig.name}
               </span>
