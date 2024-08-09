@@ -6,38 +6,24 @@ import SkillList from "@/components/CodeSrollList";
 import FitnessList from "@/components/FitnessList";
 import ProjectList from "@/components/ProjectList";
 import ScrollList from "@/components/ScrollList";
+import PersonalAnimate from "@/components/PersonalAnimate";
+import ZoomIn from '@/components/ZoomIn';
 import { testArticleData } from "@/config/articles";
 import { testProjectList } from "@/config/projects";
 import { testSkillList } from "@/config/skills";
 import { testDietList, testFitnessActions, testBookList } from "@/config/fitness";
-import PersonalAnimate from "@/components/PersonalAnimate";
+
 
 
 const Home: React.FC = () => {
-  const projectsRef = useRef<HTMLDivElement>(null); // 引用 projects 元素
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    }, { threshold: 0.1 });
-
-    const currentElement = projectsRef.current;
-    if (currentElement) observer.observe(currentElement);
-
-    return () => {
-      if (currentElement) observer.unobserve(currentElement);
-    };
-  }, []);
+  const [isProjectVisible, projectsRef] = ZoomIn();
+  const [isSkillVisible, skillsRef] = ZoomIn();
+  const [isFitnessVisible, fitnessRef] = ZoomIn();
 
 
   return (
     <>
-      <section className="w-full px-4 py-36 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
+      <section className="w-full px-4 py-48 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
         <PersonalAnimate />
         <PersonalCard />
       </ section>
@@ -49,20 +35,24 @@ const Home: React.FC = () => {
         <ScrollList items={testArticleData} />
       </section>
 
-      <section id="skills" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-32">
+      <section id="skills" 
+               ref={skillsRef} 
+               className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-44
+               ${isSkillVisible ? 'zoom-in' : ''}`}>
         <SkillList skill={testSkillList} />
       </section>
 
       <section id="projects" 
                ref={projectsRef} 
-               className={`
-                 px-4 lg:px-16 xl:px-32 2xl:px-44 py-28 
-                ${isVisible ? 'zoom-in' : ''}`}
-      >
+               className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-44 
+                ${isProjectVisible ? 'zoom-in' : ''}`}>
         <ProjectList project={testProjectList} />
       </section>
 
-      <section id="fitness" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-28">
+      <section id="fitness" 
+               ref={fitnessRef} 
+               className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-28 
+                ${isFitnessVisible ? 'zoom-in' : ''}`}>
         <FitnessList
           diets={testDietList}
           fitnessActions={testFitnessActions}

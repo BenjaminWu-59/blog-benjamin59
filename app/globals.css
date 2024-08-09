@@ -72,7 +72,7 @@
 
 /* zoom effect */
 .zoom-in{
-  animation: scaleUp 0.5s ease-in-out forwards;
+  animation: scaleUp 0.8s ease-in-out forwards;
 }
 
 @keyframes scaleUp {
