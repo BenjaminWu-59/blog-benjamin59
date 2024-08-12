@@ -1,7 +1,7 @@
 type IconProps = React.HTMLAttributes<SVGElement>;
 type ImageProps = React.ImgHTMLAttributes<HTMLImageElement>;
 
-export const Icons = {
+const Icons = {
   logo: (props: ImageProps) => (
     <img
       src="icon.png"
@@ -32,3 +32,5 @@ export const Icons = {
     </svg>
   )
 };
+
+export default Icons
