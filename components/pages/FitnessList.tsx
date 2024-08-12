@@ -24,7 +24,7 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = 
           {/* 饮食和运动 */}
           <div className="flex flex-col w-full">
             {/* 饮食 */}
-            <div className="z-10 mb-5 py-5 pl-5 pr-10 flex rounded-3xl shadow-custom">
+            <div className="z-10 mb-5 py-5 pl-5 pr-10 flex rounded-3xl shadow-normal">
               <div className="w-[35%]  p-5 text-gray-50 flex flex-col justify-center items-center rounded-3xl gredientMain">
                 <p className="whitespace-nowrap text-orange-400 text-4xl mb-2 font-bold">
                   Daily Diet
@@ -81,7 +81,7 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = 
             </div>
 
             {/* 运动 */}
-            <div className="flex-grow p-5 flex justify-center rounded-3xl shadow-custom">
+            <div className="flex-grow p-5 flex justify-center rounded-3xl shadow-normal">
               {fitnessActions.map((item, index) => (
                 <div key={index} className="w-[200px] h-[300px] p-5
                                  flex justify-center items-center 

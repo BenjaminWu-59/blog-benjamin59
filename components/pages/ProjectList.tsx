@@ -15,7 +15,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
     <>
       <div className="flex">
         <div className="w-4/12 flex flex-col rounded-3xl">
-          <div className="p-5 mb-7 flex flex-col items-center justify-center space-x-3 rounded-3xl shadow-custom gredientMain">
+          <div className="p-5 mb-7 flex flex-col items-center justify-center space-x-3 rounded-3xl shadow-normal gredientMain">
             <div className="flex items-center justify-center">
               <Icons.logo className="mr-5 h-20 w-20 rounded-3xl" />
               <span className="text-5xl font-zain font-bold text-amber-600">
@@ -24,7 +24,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
             </div>
             <p className="my-3 font-mono font-semibold text-slate-100">A full stack developer using Javascript</p>
           </div>
-          <div className="p-5 flex-grow rounded-3xl shadow-custom">
+          <div className="p-5 flex-grow rounded-3xl shadow-normal">
             <p className="mb-7">
               This module mainly includes some projects I have done, both company and personal. The technology stack is mainly concentrated on react, ts, nestjs.
               If you are interested, you can click to enter the corresponding homepage to view it.
@@ -67,10 +67,10 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
           </div>
         </div>
 
-        <div className="flex-grow ml-5 p-5 rounded-3xl grid grid-cols-2 gap-2 shadow-custom">
+        <div className="flex-grow ml-5 p-5 rounded-3xl grid grid-cols-2 gap-2 shadow-normal">
           {project.map((item, index) => (
             <div key={index}
-              className="z-10 m-2 min-w-300 min-h-250 rounded-3xl shadow-custom
+              className="z-10 m-2 min-w-300 min-h-250 rounded-3xl shadow-
                         flex justify-center items-center cursor-pointer 
                         relative group overflow-hidden
           ">

@@ -9,7 +9,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    "./style/**/*.{css}",
+    "./style/**/*.css",
   ],
   prefix: "",
   theme: {
@@ -104,6 +104,10 @@ const config = {
           '0%': { transform: 'translateY(20px) scale(0.95)' },
           '100%': { transform: 'translateY(0) scale(1.05)' },
         },
+      },
+      boxShadow: {
+        normal: "2px 2px 15px rgba(0, 0, 0, 0.12)",
+        darker: "box-shadow: 5px 5px 15px rgba(0, 0, 0, .25)"
       }
     },
   },

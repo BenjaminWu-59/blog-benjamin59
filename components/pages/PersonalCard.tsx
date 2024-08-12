@@ -48,7 +48,7 @@ const PersonalCard = () => {
           onMouseLeave={handleMouseLeave}
           className="flex items-center justify-center cursor-pointer relative"
         >
-          <div className="z-10 w-[300px] px-10 py-[20px] rounded-3xl gredientGray shadow-custom">
+          <div className="z-10 w-[300px] px-10 py-[20px] rounded-3xl gredientGray shadow-normal">
             <p className="text-xl font-bold">My name is:</p>
             <p className="p-5 text-center text-4xl font-extrabold hover:font-[1000] hover:text-sky-800">Benjamin59</p>
             <hr className="pt-5 border-t-3 border-black" />
