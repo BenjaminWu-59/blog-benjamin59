@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-export function MainNav() {
+const MainNav = ()=> {
   const pathname = usePathname();
   return (
     <nav className="flex items-center space-x-4 lg:space-x-6 justify-center">
@@ -53,3 +53,5 @@ export function MainNav() {
     </nav>
   );
 }
+
+export default MainNav

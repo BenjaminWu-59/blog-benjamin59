@@ -3,9 +3,9 @@ import { Icons } from "./Icons";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { MainNav } from "./MainNav";
+import MainNav from "./MainNav";
 
-const SiteHeader = ()=> {
+const SiteHeader = () => {
   return (
     <header className="px-4 lg:px-16 xl:px-32 2xl:px-44 fixed w-full backdrop-blur-[2px] bg-gradient-to-gray-50 bg-gradient-to-b from-gray-100 to-gray-100/0 z-20 py-4 border-b-gray-300/10 border-b">
       <div className="container flex h-14 max-w-screen-3xl items-center">
