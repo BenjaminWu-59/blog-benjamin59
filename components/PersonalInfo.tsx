@@ -11,8 +11,6 @@ const PersonalCard = () => {
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
 
-  const springRotateX = useSpring(rotateX, { stiffness: 200, damping: 20 });
-  const springRotateY = useSpring(rotateY, { stiffness: 200, damping: 20 });
 
   const handleMouseMove = (e: any) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -51,7 +49,7 @@ const PersonalCard = () => {
           onMouseLeave={handleMouseLeave}
           className="flex items-center justify-center cursor-pointer relative"
         >
-          <div className="z-10 px-[40px] py-[20px] rounded-3xl gray-gradient shadow-custom">
+          <div className="z-10 w-[300px] px-10 py-[20px] rounded-3xl gray-gradient shadow-custom">
             <p className="text-xl font-bold">My name is:</p>
             <p className="p-5 text-center text-4xl font-extrabold">Benjamin59</p>
             <hr className="pt-5 border-t-3 border-black" />
