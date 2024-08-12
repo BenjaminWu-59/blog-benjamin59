@@ -21,7 +21,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <section className="z-10 w-full px-4 py-[200px] my-28 relative flex flex-wrap-reverse justify-items-center justify-around items-center">
+      <section className="z-10 w-full px-4 py-[200px] mt-[50px] relative flex flex-wrap-reverse justify-items-center justify-around items-center">
         <PersonalAnimate />
         <PersonalCard />
       </ section>
