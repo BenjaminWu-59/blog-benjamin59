@@ -50,16 +50,16 @@ const PersonalCard = () => {
           onMouseLeave={handleMouseLeave}
           className="flex items-center justify-center cursor-pointer relative"
         >
-          <div className="z-10 p-8 w-[300px] rounded-3xl gray-gradient shadow-custom">
+          <div className="z-10 p-8 w-[300px] h-[320px] rounded-3xl gray-gradient shadow-custom">
             <p className="text-xl font-bold">My name is:</p>
             <p className="p-5 text-center text-4xl font-extrabold">Benjamin59</p>
             <hr className="pt-5 border-t-3 border-black" />
             <p className="text-xl font-bold">I'm a:</p>
-            <div className="my-3 flex flex-col items-end group">
+            <div className="flex flex-col items-end group">
               {intoductionList.map((item, index) => (
                 <div
                   key={index}
-                  className={`z-10 text-xl py-1 relative w-full text-right ${selectedIndex === index ? 'font-extrabold text-hover-color' : selectedIndex !== null ? 'opacity-50' : ''}`}
+                  className={`z-10 text-xl py-[2px] relative w-full text-right ${selectedIndex === index ? 'font-extrabold text-hover-color' : selectedIndex !== null ? 'opacity-50' : ''}`}
                   onMouseEnter={() => setSelectedIndex(index)}
                   onMouseLeave={() => setSelectedIndex(null)}
                   style={{ transition: 'all 0.3s ease' }}
