@@ -2,7 +2,7 @@ import { siteConfig } from "@/config/site";
 import { Mail } from "lucide-react";
 import { Icons } from "./Icons";
 
-export function SiteFooter() {
+const SiteFooter = () => {
   return (
     <footer className="w-full h-20 my-32 pt-2 text-center font-zain text-lg text-gray-400/100 border-gray-300/20 border">
       <div className="text-xl font-zain font-bold">
@@ -33,3 +33,5 @@ export function SiteFooter() {
     </footer>
   );
 }
+
+export default SiteFooter
