@@ -70,18 +70,6 @@
   }
 }
 
-/* gradient */
-
-.gray-gradient{
-  background: rgb(255,255,255);
-  background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 54%, rgba(233,233,233,1) 76%, rgba(230,230,230,1) 100%);
-}
-
-.grayGradient {
-  background: rgb(58,105,137);
-  background: linear-gradient(120deg, rgba(58,105,137,1) 0%, rgba(9,66,87,1) 100%);
-}
-
 /* self info card */
 .text-hover-color {
   color: #063142;

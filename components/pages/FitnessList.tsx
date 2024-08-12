@@ -25,7 +25,7 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = 
           <div className="flex flex-col w-full">
             {/* 饮食 */}
             <div className="z-10 mb-5 py-5 pl-5 pr-10 flex rounded-3xl shadow-custom">
-              <div className="w-[35%]  p-5 text-gray-50 flex flex-col justify-center items-center rounded-3xl grayGradient">
+              <div className="w-[35%]  p-5 text-gray-50 flex flex-col justify-center items-center rounded-3xl gredientMain">
                 <p className="whitespace-nowrap text-orange-400 text-4xl mb-2 font-bold">
                   Daily Diet
                 </p>

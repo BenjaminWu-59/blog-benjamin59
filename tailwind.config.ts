@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss"
 import { fontFamily } from "tailwindcss/defaultTheme"
+import type { PluginAPI } from 'tailwindcss/types/config';
 
 const config = {
   darkMode: ["class"],
@@ -102,10 +103,22 @@ const config = {
           '0%': { transform: 'translateY(20px) scale(0.95)' },
           '100%': { transform: 'translateY(0) scale(1.05)' },
         },
-      },
+      }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    ({ addUtilities }: PluginAPI) => {
+      addUtilities({
+        '.gredientMain': {
+          background: 'linear-gradient(120deg, rgba(58,105,137,1) 0%, rgba(9,66,87,1) 100%)',
+        },
+        '.gredientGray': {
+          background: 'linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 54%, rgba(233,233,233,1) 76%, rgba(230,230,230,1) 100%)'
+        }
+      });
+    },
+  ],
 } satisfies Config
 
 export default config
