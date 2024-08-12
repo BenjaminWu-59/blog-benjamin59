@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { Mail } from "lucide-react";
-import Icons from "./Icons";
+import Icons from "@/components/Icons";
 
 const SiteFooter = () => {
   return (
