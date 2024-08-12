@@ -106,8 +106,6 @@
   opacity: 1;
 }
 
-@import '@/style/custom-style.css'; 
-
 /* components/CarouselList.module.css */
 .as-scroll-container{
   display:flex;

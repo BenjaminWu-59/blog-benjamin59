@@ -1,17 +1,15 @@
 'use client'
 import PersonalCard from "@/components/pages/PersonalCard";
-import SkillList from "@/components/CodeList";
-import FitnessList from "@/components/FitnessList";
+import PersonalAnimate from "@/components/pages/PersonalAnimate";
+import ScrollList from "@/components/pages/BlogList";
+import SkillList from "@/components/pages/CodeList";
 import ProjectList from "@/components/pages/ProjectList";
-import ScrollList from "@/components/BlogList";
-import PersonalAnimate from "@/components/PersonalAnimate";
+import FitnessList from "@/components/pages/FitnessList";
 import ZoomIn from '@/components/ZoomIn';
 import { testArticleData } from "@/config/articles";
 import { testProjectList } from "@/config/projects";
 import { testSkillList } from "@/config/skills";
 import { testDietList, testFitnessActions, testBookList } from "@/config/fitness";
-
-
 
 const Home: React.FC = () => {
   const [isProjectVisible, projectsRef] = ZoomIn();

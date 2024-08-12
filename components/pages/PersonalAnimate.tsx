@@ -1,4 +1,4 @@
-import { Icons } from "./Icons";
+import { Icons } from "../Icons";
 
 const PersonalAnimate = () => {
   return (
