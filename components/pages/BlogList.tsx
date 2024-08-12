@@ -8,7 +8,7 @@ interface BlogListProps {
 
 const ScrollList: React.FC<BlogListProps> = ({ items = [] }) => {
   return (
-    <div className="py-5  as-scroll-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
+    <div className="as-scroll-container py-5 flex overflow-hidden">
       <section className="flex as-scroll-animate" >
         {items.map((item, index) => (
           <div key={index} className="z-10 w-[400px] h-[250px] m-5 px-4 flex-grow rounded-3xl cursor-pointer border border-border flex flex-col" style={{
@@ -17,7 +17,7 @@ const ScrollList: React.FC<BlogListProps> = ({ items = [] }) => {
           }}>
             <p className="py-3 text-2xl font-bold">{item.title}</p>
             <hr className="pt-4 border-black-3" />
-            <p className="text-muted-foreground">
+            <p className="text-gray-500">
               {item.description}
             </p>
             <div className="py-2 flex justify-between items-center mt-auto">
@@ -47,7 +47,7 @@ const ScrollList: React.FC<BlogListProps> = ({ items = [] }) => {
           }}>
             <p className="py-3 text-2xl font-bold">{item.title}</p>
             <hr className="pt-4 border-black-3" />
-            <p className="text-muted-foreground">
+            <p className="text-gray-500">
               {item.description}
             </p>
             <div className="py-2 flex justify-between items-center mt-auto">

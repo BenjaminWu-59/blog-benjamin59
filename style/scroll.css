@@ -1,0 +1,25 @@
+/* 横向滚动scrool */
+.as-scroll-container{
+  display:flex;
+  mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+}
+
+.as-scroll-animate{
+  will-change: transform;
+  animation:loop-scroll 40s linear infinite;
+}
+
+.as-scroll-container:hover .as-scroll-animate{
+  animation-play-state: paused;
+  cursor: point;
+}
+
+
+@keyframes loop-scroll{
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

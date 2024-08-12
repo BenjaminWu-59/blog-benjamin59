@@ -70,34 +70,7 @@
   }
 }
 
-/* components/CarouselList.module.css */
-.as-scroll-container{
-  display:flex;
-}
-
-.as-scroll-animate{
-  will-change: transform;
-  animation:loop-scroll 40s linear infinite;
-}
-
-.as-scroll-container:hover .as-scroll-animate{
-  animation-play-state: paused;
-  cursor: point;
-}
-
-.text-muted-foreground {
-  color: #64748B
-}
-
-
-@keyframes loop-scroll{
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
+@import "@/style/scroll.css";
 
 /* shadow custom */
 .shadow-custom{
