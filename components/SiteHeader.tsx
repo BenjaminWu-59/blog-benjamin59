@@ -3,7 +3,7 @@ import Icons from "@/components/SiteIcons";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import MainNav from "./MainNav";
+import MainNav from "./TopNav";
 
 const SiteHeader = () => {
   return (
