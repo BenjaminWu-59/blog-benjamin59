@@ -68,7 +68,26 @@ const config = {
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "zoom-in": 'zoomin 0.8s ease-in-out forwards'
+      },
+      minWidth: {
+        '100': '100px',
+        '150': '150px',
+        '175': '175px',
+        '200': '200px',
+        '250': '250px',
+        '300': '300px',
+        '350': '350px',
+      },
+      minHeight: {
+        '100': '100px',
+        '150': '150px',
+        '175': '175px',
+        '200': '200px',
+        '250': '250px',
+        '300': '300px',
+        '350': '350px',
       },
       keyframes: {
         "accordion-down": {
@@ -78,26 +97,12 @@ const config = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
-        }
+        },
+        zoomin: {
+          '0%': { transform: 'translateY(20px) scale(0.95)' },
+          '100%': { transform: 'translateY(0) scale(1.05)' },
+        },
       },
-      minWidth:{
-        '100': '100px',
-        '150': '150px',
-        '175': '175px',
-        '200': '200px',
-        '250': '250px',
-        '300': '300px',
-        '350': '350px',
-      },
-      minHeight:{
-        '100': '100px',
-        '150': '150px',
-        '175': '175px',
-        '200': '200px',
-        '250': '250px',
-        '300': '300px',
-        '350': '350px',
-      }
     },
   },
   plugins: [require("tailwindcss-animate")],

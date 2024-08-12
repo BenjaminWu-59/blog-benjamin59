@@ -34,21 +34,21 @@ const Home: React.FC = () => {
       <section id="skills" 
                ref={skillsRef} 
                className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32
-               ${isSkillVisible ? 'zoom-in' : ''}`}>
+               ${isSkillVisible ? 'animate-zoom-in' : ''}`}>
         <SkillList skill={testSkillList} />
       </section>
 
       <section id="projects" 
                ref={projectsRef} 
                className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32
-                ${isProjectVisible ? 'zoom-in' : ''}`}>
+                ${isProjectVisible ? 'animate-zoom-in' : ''}`}>
         <ProjectList project={testProjectList} />
       </section>
 
       <section id="fitness" 
                ref={fitnessRef} 
                className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32 
-                ${isFitnessVisible ? 'zoom-in' : ''}`}>
+                ${isFitnessVisible ? 'animate-zoom-in' : ''}`}>
         <FitnessList
           diets={testDietList}
           fitnessActions={testFitnessActions}
