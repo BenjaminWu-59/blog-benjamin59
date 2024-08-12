@@ -70,15 +70,6 @@
   }
 }
 
-/* self info card */
-.text-hover-color {
-  color: #063142;
-}
-
-.group-hover\\:opacity-100:hover .group-hover\\:opacity-100 {
-  opacity: 1;
-}
-
 /* components/CarouselList.module.css */
 .as-scroll-container{
   display:flex;

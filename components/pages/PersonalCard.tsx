@@ -50,14 +50,14 @@ const PersonalCard = () => {
         >
           <div className="z-10 w-[300px] px-10 py-[20px] rounded-3xl gredientGray shadow-custom">
             <p className="text-xl font-bold">My name is:</p>
-            <p className="p-5 text-center text-4xl font-extrabold">Benjamin59</p>
+            <p className="p-5 text-center text-4xl font-extrabold hover:font-[1000] hover:text-sky-800">Benjamin59</p>
             <hr className="pt-5 border-t-3 border-black" />
             <p className="text-xl font-bold">I'm a:</p>
             <div className="flex flex-col items-end group">
               {intoductionList.map((item, index) => (
                 <div
                   key={index}
-                  className={`z-10 text-xl py-[2px] w-full text-right ${selectedIndex === index ? 'font-extrabold text-hover-color' : selectedIndex !== null ? 'opacity-50' : ''}`}
+                  className={`z-10 text-xl py-[2px] w-full text-right ${selectedIndex === index ? 'font-extrabold text-sky-800' : selectedIndex !== null ? 'opacity-50' : ''}`}
                   onMouseEnter={() => setSelectedIndex(index)}
                   onMouseLeave={() => setSelectedIndex(null)}
                   style={{ transition: 'all 0.3s ease' }}
