@@ -24,6 +24,12 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
+
+      <div className="py-10">
+        <a href={siteConfig.links.icp}>
+          <span className="font-semibold text-blue-400">闽ICP备2024058520号-1</span>
+        </a>
+      </div>
     </footer>
   );
 }
