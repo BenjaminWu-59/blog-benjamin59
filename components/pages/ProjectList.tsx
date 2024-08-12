@@ -1,8 +1,9 @@
-import { Project } from "@/config/projects";
-import { siteConfig } from "@/config/site";
+import { Project } from "../../config/projects";
+import { siteConfig } from "../../config/site"
 import Image from "next/image";
-import { Icons } from "./icons";
+import { Icons } from "../Icons";
 import Link from "next/link";
+import React from "react";
 
 interface ProjectListProps {
   project: Project[];

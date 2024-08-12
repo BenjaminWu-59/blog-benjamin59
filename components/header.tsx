@@ -1,9 +1,9 @@
 import { siteConfig } from "@/config/site";
-import { Icons } from "./icons";
+import { Icons } from "./Icons";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { MainNav } from "./mainNav";
+import { MainNav } from "./MainNav";
 
 export function SiteHeader() {
   return (

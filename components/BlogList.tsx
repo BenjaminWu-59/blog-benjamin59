@@ -2,11 +2,11 @@ import { BlogPost } from '@/config/articles';
 import React from 'react';
 import Image from "next/image";
 
-interface ScrollListProps {
+interface BlogListProps {
   items: BlogPost[];
 }
 
-const ScrollList: React.FC<ScrollListProps> = ({ items = [] }) => {
+const ScrollList: React.FC<BlogListProps> = ({ items = [] }) => {
   return (
     <div className="py-5  as-scroll-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
       <section className="flex as-scroll-animate" >

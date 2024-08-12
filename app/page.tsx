@@ -1,9 +1,9 @@
 'use client'
-import PersonalCard from "@/components/PersonalInfo";
-import SkillList from "@/components/CodeSrollList";
+import PersonalCard from "@/components/pages/PersonalCard";
+import SkillList from "@/components/CodeList";
 import FitnessList from "@/components/FitnessList";
-import ProjectList from "@/components/ProjectList";
-import ScrollList from "@/components/ScrollList";
+import ProjectList from "@/components/pages/ProjectList";
+import ScrollList from "@/components/BlogList";
 import PersonalAnimate from "@/components/PersonalAnimate";
 import ZoomIn from '@/components/ZoomIn';
 import { testArticleData } from "@/config/articles";

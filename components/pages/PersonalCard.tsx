@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useMotionValue, useSpring, motion } from 'framer-motion'
-import PersonalAnimate from "./PersonalAnimate";
+import { useMotionValue, motion } from 'framer-motion'
 
 const PersonalCard = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
