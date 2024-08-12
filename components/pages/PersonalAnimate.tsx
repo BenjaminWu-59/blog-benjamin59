@@ -18,13 +18,18 @@ const PersonalAnimate = () => {
         </div>
       </div>
       {/* 外部圆圈上的小圆 */}
-      <div className="circle-main absolute w-[90px] h-[90px] rounded-full">
+      <div className="z-10 circle-main absolute w-[90px] h-[90px] rounded-full">
         <Icons.logo className="rounded-full" />
       </div>
 
       {/* 内部圆圈上的小圆 */}
       <div className="circle-2 absolute w-[50px] h-[50px] bg-white rounded-full">
         <Icons.gitHub className="rounded-full" />
+      </div>
+
+      {/* 内部圆圈上的小圆 */}
+      <div className="circle-3 absolute w-[50px] h-[50px] bg-white rounded-full">
+        <Icons.google className="rounded-full" />
       </div>
     </>
   )

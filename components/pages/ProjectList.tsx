@@ -70,7 +70,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
         <div className="flex-grow ml-5 p-5 rounded-3xl grid grid-cols-2 gap-2 shadow-normal">
           {project.map((item, index) => (
             <div key={index}
-              className="z-10 m-2 min-w-300 min-h-250 rounded-3xl shadow-
+              className="z-10 m-2 min-w-300 min-h-250 rounded-3xl shadow-normal
                         flex justify-center items-center cursor-pointer 
                         relative group overflow-hidden
           ">
@@ -86,8 +86,8 @@ const ProjectList: React.FC<ProjectListProps> = ({ project = [] }) => {
                 </div>
               </div>
               {/* overlay section */}
-              <div className="absolute left-0 top-0 opacity-0 flex justify-center items-center
-                 group-hover:p-5 w-full h-full
+              <div className="absolute left-0 top-0 opacity-0
+                 group-hover:p-5 w-full h-full 
                  group-hover:opacity-85 bg-[#2D3849]/60 rounded-3xl
                  group-hover:backdrop-blur-sm duration-500 pointer-events-none">
                 <p className="font-sans font-medium text-slate-100">

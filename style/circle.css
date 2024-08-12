@@ -24,3 +24,16 @@
     transform: rotate(360deg) translateX(320px) rotate(-360deg);
   }
 }
+
+.circle-3 {
+  animation: spinClockwise600 8s linear infinite;
+}
+
+@keyframes spinClockwise600 {
+  0% {
+    transform: rotate(0deg) translateX(320px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(320px) rotate(-360deg);
+  }
+}
