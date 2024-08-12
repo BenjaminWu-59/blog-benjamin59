@@ -1,6 +1,4 @@
 'use client'
-
-import { useEffect, useRef, useState } from 'react';
 import PersonalCard from "@/components/PersonalInfo";
 import SkillList from "@/components/CodeSrollList";
 import FitnessList from "@/components/FitnessList";
