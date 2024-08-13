@@ -68,7 +68,7 @@ const PersonalCard = () => {
               ))}
             </div>
           </div>
-          <div className="z-10 rounded-full absolute w-[60px] h-[60px] left-[0%] bottom-[-18%] transform -translate-x-1/2 -translate-y-1/2">
+          <div className="z-10 rounded-full absolute w-[60px] h-[60px] left-[5%] bottom-[-18%] transform -translate-x-1/2 -translate-y-1/2">
             <Icons.vscode className="rounded-full" />
           </div>
         </motion.div>

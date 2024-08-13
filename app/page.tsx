@@ -19,7 +19,8 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <section className="z-10 w-full px-4 py-[220px] mt-[50px] relative flex flex-wrap-reverse justify-items-center justify-around items-center">
+      <section className="z-10 w-full px-4 py-[220px] mt-[50px]
+                          relative flex flex-wrap-reverse justify-items-center justify-around items-center">
         <PersonalAnimate />
         <PersonalCard />
       </ section>

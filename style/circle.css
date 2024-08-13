@@ -1,6 +1,6 @@
 /* rotate cicle */
 .circle-main {
-  animation: spinClockwise 10s linear infinite;
+  animation: spinClockwise 12s linear infinite;
 }
 
 @keyframes spinClockwise {
@@ -13,7 +13,7 @@
 }
 
 .circle-2 {
-  animation: spinClockwise600 7s linear infinite;
+  animation: spinClockwise600 9s linear infinite;
 }
 
 @keyframes spinClockwise600 {
