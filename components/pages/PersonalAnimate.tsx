@@ -28,7 +28,7 @@ const PersonalAnimate = () => {
       </div>
 
       {/* 内部圆圈上的小圆 */}
-      <div className="circle-3 absolute w-[50px] h-[50px] bg-white rounded-full">
+      <div className="circle-3 absolute w-[50px] h-[50px] rounded-full">
         <Icons.google className="rounded-full" />
       </div>
     </>
