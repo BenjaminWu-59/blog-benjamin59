@@ -1,65 +1,54 @@
 /* bg animate */
-.cus-wrapper span{
+.cus-wrapper span {
   position: fixed;
   bottom: -180px;
   height: 50px;
   width: 50px;
   z-index: -1;
-  background-color: #fafafa;
-  box-shadow: 0 0 50px  #d8d8d8, 
-              0 0 100px #d8d8d8, 
-              0 0 150px #d8d8d8,
-              0 0 150px #d8d8d8;
   animation: animate 13s linear infinite;
-  border-radius: 30%
 }
 
 .cus-wrapper span:nth-child(1) {
-  left: 60px;
-  animation-delay: 0.6s;
+  left: 30%;
+  animation-delay: 5s;
+  width: 80px;
+  height: 80px;
 }
 
+.cus-wrapper span:nth-child(2) {
+  left: 30%;
+  animation-delay: 5s;
+  width: 80px;
+  height: 80px;
+}
 
 .cus-wrapper span:nth-child(3) {
-  left: 30%;
-  animation-delay: 5s;
-  width: 80px;
-  height: 80px;
-}
-
-.cus-wrapper span:nth-child(4) {
-  left: 30%;
-  animation-delay: 5s;
-  width: 80px;
-  height: 80px;
-}
-
-.cus-wrapper span:nth-child(6) {
-  left: 50%;
+  left: 60%;
   animation-delay: 7s;
 }
 
-.cus-wrapper span:nth-child(7) {
-  left: 60%;
+.cus-wrapper span:nth-child(4) {
+  left: 75%;
   animation-delay: 6s;
 }
 
-.cus-wrapper span:nth-child(8) {
-  left: 70%;
+.cus-wrapper span:nth-child(5) {
+  left: 80%;
   animation-delay: 8s;
 }
 
-.cus-wrapper span:nth-child(9) {
-  left: 80%;
+.cus-wrapper span:nth-child(6) {
+  left: 90%;
   animation-delay: 10s;
   width: 90px;
   height: 90px;
 }
 
-.cus-wrapper span:nth-child(10) {
-  left: 90%;
+.cus-wrapper span:nth-child(7) {
+  left: 95%;
   animation-delay: 4s;
 }
+
 
 @keyframes animate {
   0% {
@@ -71,7 +60,7 @@
   }
 
   100%{
-    transform: translateY(-1300px) rotate(360deg);
+    transform: translateY(-1000px) rotate(360deg);
     opacity:0;
   }
 }

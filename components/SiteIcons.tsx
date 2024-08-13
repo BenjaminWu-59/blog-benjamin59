@@ -37,6 +37,9 @@ const Icons = {
   vscode: (props: ImageProps) => (
     <img src="vscode.svg" alt="VsCode" {...props} />
   ),
+  snow: (props: ImageProps) => (
+    <img src="snow.svg" alt="snow" {...props} />
+  ),
 };
 
 export default Icons
