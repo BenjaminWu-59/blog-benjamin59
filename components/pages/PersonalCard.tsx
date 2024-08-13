@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useMotionValue, motion } from 'framer-motion'
+import Icons from "@/components/SiteIcons";
 
 const PersonalCard = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -67,9 +68,10 @@ const PersonalCard = () => {
               ))}
             </div>
           </div>
+          <div className="z-10 rounded-full absolute w-[60px] h-[60px] left-[0%] bottom-[-18%] transform -translate-x-1/2 -translate-y-1/2">
+            <Icons.vscode className="rounded-full" />
+          </div>
         </motion.div>
-
-        <div></div>
       </div>
     </>
   )

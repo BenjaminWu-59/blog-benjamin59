@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import MoveCircle from "@/components/MoveCircle";
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -24,8 +25,8 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         inter.variable
       )}>
-        <div className="flex min-h-dvh flex-col bg-background">
-          {/* <BgforCircle /> */}
+        <div className="relative flex min-h-dvh flex-col bg-background">
+          <MoveCircle />
           <SiteHeader />
           <main className="z-10">{children}</main>
           <SiteFooter />
