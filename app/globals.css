@@ -31,10 +31,23 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --shadow-normal: 2px 2px 15px rgba(0, 0, 0, 0.12);
+    --gredientGray: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(242, 242, 242, 1) 54%,
+      rgba(233, 233, 233, 1) 76%,
+      rgba(230, 230, 230, 1) 100%
+    );
+    --gredientMain: linear-gradient(
+      120deg,
+      rgba(58, 105, 137, 1) 0%,
+      rgba(9, 66, 87, 1) 100%
+    );
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 84% 5.1%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -58,6 +71,13 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --shadow-normal: 0px 0px 10px rgba(251, 251, 251, 0.1);
+    --gredientGray: 222.2 84% 5.1%;
+    --gredientMain: linear-gradient(
+      120deg,
+      rgba(58, 105, 137, 1) 0%,
+      rgba(9, 66, 87, 1) 100%
+    );
   }
 }
 
@@ -74,4 +94,3 @@
 @import "@/style/scroll.css";
 @import "@/style/book3d.css";
 @import "@/style/movecircle.css";
-

@@ -106,7 +106,7 @@ const config = {
         },
       },
       boxShadow: {
-        normal: "2px 2px 15px rgba(0, 0, 0, 0.12)",
+        normal:"var(--shadow-normal)",
         darker: "box-shadow: 5px 5px 15px rgba(0, 0, 0, .25)"
       }
     },
@@ -116,10 +116,10 @@ const config = {
     ({ addUtilities }: PluginAPI) => {
       addUtilities({
         '.gredientMain': {
-          background: 'linear-gradient(120deg, rgba(58,105,137,1) 0%, rgba(9,66,87,1) 100%)',
+          background: 'var(--gredientMain)',
         },
         '.gredientGray': {
-          background: 'linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 54%, rgba(233,233,233,1) 76%, rgba(230,230,230,1) 100%)'
+          background: 'var(--gredientGray)'
         }
       });
     },
