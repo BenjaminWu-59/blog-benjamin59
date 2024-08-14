@@ -23,7 +23,7 @@ const PersonalAnimate = () => {
       </div>
 
       {/* 内部圆圈上的小圆 */}
-      <div className="circle-2 absolute w-[50px] h-[50px] rounded-full bg-background opacity-100">
+      <div className="circle-2 absolute w-[50px] h-[50px] rounded-full bg-background">
         <Icons.gitHub className="rounded-full" />
       </div>
 

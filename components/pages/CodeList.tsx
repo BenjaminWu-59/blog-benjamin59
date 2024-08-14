@@ -20,7 +20,7 @@ const SkillList: React.FC<SkillListProps> = ({ skill = [] }) => {
               <Image
                 src={`/` + item.icon + `.svg`}
                 alt="JS"
-                className="dark:invert pr-1"
+                className="bg-background pr-1"
                 width={60}
                 height={60}
                 priority
