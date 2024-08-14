@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import MainNav from "./TopNav";
+import ModeToggle from "./ModeToggle";
 
 const SiteHeader = () => {
   return (
@@ -42,6 +43,7 @@ const SiteHeader = () => {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
+            <ModeToggle />
           </nav>
         </div>
       </div>
