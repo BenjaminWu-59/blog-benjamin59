@@ -47,7 +47,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 5.1%;
+    --background: 222.2 84% 5.8%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -72,7 +72,7 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --shadow-normal: 0px 0px 10px rgba(251, 251, 251, 0.1);
-    --gredientGray: 222.2 84% 5.1%;
+    --gredientGray: 222.2 84% 5.8%;
     --gredientMain: linear-gradient(
       120deg,
       rgba(58, 105, 137, 1) 0%,

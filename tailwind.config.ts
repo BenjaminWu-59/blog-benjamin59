@@ -73,6 +73,20 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "zoom-in": 'zoomin 0.8s ease-in-out forwards'
       },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        zoomin: {
+          '0%': { transform: 'translateY(20px) scale(0.90)'},
+          '100%': { transform: 'translateY(0) scale(1.00)'}
+        },
+      },
       minWidth: {
         '100': '100px',
         '150': '150px',
@@ -90,20 +104,6 @@ const config = {
         '250': '250px',
         '300': '300px',
         '350': '350px',
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        zoomin: {
-          '0%': { transform: 'translateY(20px) scale(0.95)' },
-          '100%': { transform: 'translateY(0) scale(1.05)' },
-        },
       },
       boxShadow: {
         normal:"var(--shadow-normal)",

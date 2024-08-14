@@ -5,6 +5,7 @@
 }
 
 .as-scroll-animate{
+  width: 100vw;
   will-change: transform;
   animation:loop-scroll 40s linear infinite;
 }
