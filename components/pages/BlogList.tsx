@@ -11,10 +11,7 @@ const ScrollList: React.FC<BlogListProps> = ({ items = [] }) => {
     <div className="as-scroll-container py-5 flex overflow-hidden">
       <section className="flex as-scroll-animate" >
         {items.map((item, index) => (
-          <div key={index} className="z-10 w-[400px] h-[250px] m-5 px-4 flex-grow rounded-3xl cursor-pointer border border-border flex flex-col" style={{
-            backgroundColor: item.backgroundColor,
-            background: item.background
-          }}>
+          <div key={index} className="z-10 w-[400px] h-[250px] m-5 px-4 flex-grow rounded-3xl cursor-pointer border border-border flex flex-col shadow-normal">
             <p className="py-3 text-2xl font-bold">{item.title}</p>
             <hr className="pt-4 border-black-3" />
             <p className="text-gray-500">
@@ -41,10 +38,7 @@ const ScrollList: React.FC<BlogListProps> = ({ items = [] }) => {
       </section>
       <section className="flex as-scroll-animate" aria-hidden="true">
         {items.map((item, index) => (
-          <div key={index} className="z-10 w-[400px] h-[250px] m-5 px-4 flex-grow rounded-3xl cursor-pointer border border-border flex flex-col" style={{
-            backgroundColor: item.backgroundColor,
-            background: item.background
-          }}>
+          <div key={index} className="z-10 w-[400px] h-[250px] m-5 px-4 flex-grow rounded-3xl cursor-pointer border border-border flex flex-col shadow-normal">
             <p className="py-3 text-2xl font-bold">{item.title}</p>
             <hr className="pt-4 border-black-3" />
             <p className="text-gray-500">
