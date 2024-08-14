@@ -1,7 +1,7 @@
 'use client'
 import PersonalCard from "@/components/pages/PersonalCard";
 import PersonalAnimate from "@/components/pages/PersonalAnimate";
-import ScrollList from "@/components/pages/BlogList";
+import BolgList from "@/components/pages/BlogList";
 import SkillList from "@/components/pages/CodeList";
 import ProjectList from "@/components/pages/ProjectList";
 import FitnessList from "@/components/pages/FitnessList";
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         <p className="relative inline-block text-2xl font-medium pb-1 px-1 rounded-lg bg-gradient-to-r from-orange-300 to-orange-300 text-black dark:text-white">
           Here are some of the articles I wrote, including technical articles, essays, etc.
         </p>
-        <ScrollList items={testArticleData} />
+        <BolgList items={testArticleData} />
       </section> 
 
       <section id="skills" 
