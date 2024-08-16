@@ -69,7 +69,7 @@ const PersonalCard = () => {
             </div>
           </div>
           <div className="z-10 rounded-full absolute w-[40px] h-[40px] left-[3%] bottom-[-12%] transform -translate-x-1/2 -translate-y-1/2">
-            <Icons.vscode className="rounded-full" />
+            <Icons.vscode className="rounded-full bg-background" />
           </div>
         </motion.div>
       </div>
