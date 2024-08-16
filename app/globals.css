@@ -44,6 +44,7 @@
       rgba(58, 105, 137, 1) 0%,
       rgba(9, 66, 87, 1) 100%
     );
+    --gredientBlue: linear-gradient(153deg, rgba(115,178,219,1) 0%, rgba(70,149,203,1) 52%, rgba(41,125,182,1) 100%);
   }
 
   .dark {
@@ -78,6 +79,7 @@
       rgba(58, 105, 137, 1) 0%,
       rgba(9, 66, 87, 1) 100%
     );
+    --gredientBlue: linear-gradient(153deg, rgba(115,178,219,1) 0%, rgba(70,149,203,1) 52%, rgba(41,125,182,1) 100%);
   }
 }
 

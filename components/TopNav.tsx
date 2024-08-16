@@ -15,7 +15,7 @@ const MainNav = ()=> {
         <span className="text-3xl font-zain font-bold text-foreground/80">{siteConfig.name}</span>
       </Link>
       <Link
-        href="#blogs"
+        href="/#blogs"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/blog" ? "text-foreground" : "text-foreground/60"
@@ -24,7 +24,7 @@ const MainNav = ()=> {
         Blogs
       </Link>
       <Link
-        href="#skills"
+        href="/#skills"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
@@ -33,7 +33,7 @@ const MainNav = ()=> {
         Skills
       </Link>
       <Link
-        href="#projects"
+        href="/#projects"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
@@ -42,7 +42,7 @@ const MainNav = ()=> {
         Projects
       </Link>
       <Link
-        href="#fitness"
+        href="/#fitness"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/about" ? "text-foreground" : "text-foreground/60"

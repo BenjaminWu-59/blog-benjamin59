@@ -25,30 +25,38 @@ const Home: React.FC = () => {
         <PersonalCard />
       </ section>
 
-     <section id="blogs" className="px-4 lg:px-16 xl:px-32 2xl:px-44 pt-[20px] pb-[200px]">
-        <p className="relative inline-block text-2xl font-medium pb-1 px-1 rounded-lg bg-gradient-to-r from-orange-300 to-orange-300 text-black dark:text-white">
+      <section id="blogs" className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-32">
+        <p className="relative inline-block text-2xl font-medium pb-1 px-1 rounded-lg  gredientBlue text-black dark:text-white">
           Here are some of the articles I wrote, including technical articles, essays, etc.
         </p>
+        <div className="px-2 py-5">
+          <p className="inline-block text-3xl font-medium pb-1 px-1 rounded-lg text-black dark:text-white">
+            You can click here To see my &nbsp;
+            <a href="/blog" className="border-b-2 border-blue-400">
+              📃All Blogs
+            </a>
+          </p>
+        </div>
         <BolgList items={testArticleData} />
-      </section> 
+      </section>
 
-      <section id="skills" 
-               ref={skillsRef} 
-               className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32
+      <section id="skills"
+        ref={skillsRef}
+        className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32
                ${isSkillVisible ? 'animate-zoom-in' : ''}`}>
         <SkillList skill={testSkillList} />
       </section>
 
-      <section id="projects" 
-               ref={projectsRef} 
-               className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32
+      <section id="projects"
+        ref={projectsRef}
+        className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32
                 ${isProjectVisible ? 'animate-zoom-in' : ''}`}>
         <ProjectList project={testProjectList} />
       </section>
 
-      <section id="fitness" 
-               ref={fitnessRef} 
-               className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32 
+      <section id="fitness"
+        ref={fitnessRef}
+        className={`px-4 lg:px-16 xl:px-32 2xl:px-44 py-32 
                 ${isFitnessVisible ? 'animate-zoom-in' : ''}`}>
         <FitnessList
           diets={testDietList}

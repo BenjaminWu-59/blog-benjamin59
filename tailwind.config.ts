@@ -120,6 +120,9 @@ const config = {
         },
         '.gredientGray': {
           background: 'var(--gredientGray)'
+        },
+        '.gredientBlue': {
+          background: 'var(--gredientBlue)'
         }
       });
     },
