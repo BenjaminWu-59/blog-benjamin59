@@ -1,8 +1,11 @@
 import { posts } from "#site/content"
 import PostItem from "@/components/PostItem" 
+import { sortPosts } from "@/lib/utils"
+
 
 const BlogPage = async () => {
-  const displayPosts = posts
+  const sortedPosts = sortPosts(posts.filter((post)=> post.published));
+  const displayPosts = sortedPosts
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
@@ -14,7 +17,7 @@ const BlogPage = async () => {
           </p>
         </div>
       </div>
-
+ 
       <hr className="mt-8" />
       {displayPosts?.length > 0 ? (
         <ul className="flex flex-col">
