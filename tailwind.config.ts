@@ -126,6 +126,7 @@ const config = {
         }
       });
     },
+    require('@tailwindcss/typography')
   ],
 } satisfies Config
 
