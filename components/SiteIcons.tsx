@@ -4,7 +4,7 @@ type ImageProps = React.ImgHTMLAttributes<HTMLImageElement>;
 const Icons = {
   logo: (props: ImageProps) => (
     <img
-      src="icon.png"
+      src="/icon.png"
       alt="Logo"
       {...props}
     />
@@ -32,13 +32,13 @@ const Icons = {
     </svg>
   ),
   google: (props: ImageProps) => (
-    <img src="google.svg" alt="Google" {...props} />
+    <img src="/google.svg" alt="Google" {...props} />
   ),
   vscode: (props: ImageProps) => (
-    <img src="vscode.svg" alt="VsCode" {...props} />
+    <img src="/vscode.svg" alt="VsCode" {...props} />
   ),
   snow: (props: ImageProps) => (
-    <img src="snow.svg" alt="snow" {...props} />
+    <img src="/snow.svg" alt="snow" {...props} />
   ),
 };
 

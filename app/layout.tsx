@@ -30,7 +30,7 @@ export default function RootLayout({
           <div className="relative flex min-h-dvh flex-col bg-background">
             <MoveCircle />
             <SiteHeader />
-            <main className="z-10">{children}</main>
+            <main className="z-10 flex-1">{children}</main>
             <SiteFooter />
           </div>
         </Providers>
