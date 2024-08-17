@@ -1,7 +1,7 @@
 import { cn, formatDate } from "@/lib/utils";
 import { Calendar } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 interface PostItemProps {
   slug: string;
@@ -10,7 +10,6 @@ interface PostItemProps {
   date: string;
   tags?: Array<string>;
 }
-
 const PostItem = ({
   slug,
   title,

@@ -1,5 +1,5 @@
 import { posts } from "#site/content"
-import PostItem from "@/components/PostItem" 
+import PostItem from "@/components/blogs/PostItem" 
 import { sortPosts } from "@/lib/utils"
 
 

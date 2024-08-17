@@ -36,6 +36,8 @@ const PostPage = async ({ params }: PostPageProps) => {
       {post.description ? (
         <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
       ) : null}
+      <hr className="my-4" />
+
     </article>
   )
 }
