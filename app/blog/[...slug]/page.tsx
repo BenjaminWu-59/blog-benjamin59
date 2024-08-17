@@ -3,6 +3,7 @@ import { posts } from "#site/content";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { notFound } from "next/navigation";
+import MDXContent from "@/components/blogs/MdxContent"
 
 
 interface PostPageProps {
@@ -35,9 +36,9 @@ const PostPage = async ({ params }: PostPageProps) => {
       <h1 className="text-4xl font-bold mb-2">{post.title}</h1>
       {post.description ? (
         <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
-      ) : null}
+      ) : null} 
       <hr className="my-4" />
-
+      <MDXContent code={post.body}/>
     </article>
   )
 }
