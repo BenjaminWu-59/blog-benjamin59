@@ -1,6 +1,7 @@
 import { posts } from "#site/content"
+import PostItem from "@/components/PostItem"
 
-const BlogPage = () => {
+const BlogPage = async () => {
   const displayPosts = posts
 
   return (
@@ -16,7 +17,16 @@ const BlogPage = () => {
 
       <hr className="mt-8" />
       {displayPosts?.length > 0 ? (
-        <ul className="flex flex-col"></ul>
+        <ul className="flex flex-col">
+          {displayPosts.map(post => {
+            const { slug, date, title, description } = post;
+            return (
+              <li key={slug}>
+                <PostItem slug={slug} date={date} title={title} description={description} />
+              </li>
+            );
+          })}
+        </ul>
       ) : (
         <p>Nothing to see here yet</p>
       )}
