@@ -29,13 +29,16 @@ const Home: React.FC = () => {
         <p className="relative inline-block text-2xl font-medium pb-1 px-1 rounded-lg  gredientBlue text-black dark:text-white">
           Here are some of the articles I wrote, including technical articles, essays, etc.
         </p>
-        <div className="px-2 py-5">
-          <p className="inline-block text-3xl font-medium pb-1 px-1 rounded-lg text-black dark:text-white">
-            You can click here To see my &nbsp;
-            <a href="/blog" className="border-b-2 border-blue-400">
+
+        <div className="w-[500px] relative px-5 py-5 flex text-3xl font-medium pb-1 rounded-lg text-black dark:text-white">
+          <div className="absolute my-2 bottom-[-5px] left-[-5px] border-b-4 border-l-4 border-blue-500 w-4 h-4" />
+          You can click here To see my &nbsp;
+          <div className="hover:scale-110 transition-transform duration-900">
+            <a href="/blog" className="m-1 border-b-2 border-blue-400">
               📃All Blogs
             </a>
-          </p>
+          </div>
+          <div className="absolute my-2 top-0 right-[-5px] border-t-4 border-r-4 border-blue-500 w-4 h-4" />
         </div>
         <BolgList items={testArticleData} />
       </section>
