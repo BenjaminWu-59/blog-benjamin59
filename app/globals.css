@@ -92,7 +92,7 @@
   }
 }
 
-@import "@/style/circle.css";
-@import "@/style/scroll.css";
-@import "@/style/book3d.css";
-@import "@/style/movecircle.css";
+@import "@/styles/circle.css";
+@import "@/styles/scroll.css";
+@import "@/styles/book3d.css";
+@import "@/styles/movecircle.css";

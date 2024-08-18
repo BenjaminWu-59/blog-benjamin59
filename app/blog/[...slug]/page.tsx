@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { notFound } from "next/navigation";
 import MDXContent from "@/components/blogs/MdxContent"
-
+import "@/styles/mdx.css"
 
 interface PostPageProps {
   params: {
