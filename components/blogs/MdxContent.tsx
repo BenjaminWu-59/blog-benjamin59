@@ -1,5 +1,6 @@
 import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
+import CallOut from "./CallOut";
 
 
 const useMDXComponent = (code: string) => {
@@ -8,7 +9,8 @@ const useMDXComponent = (code: string) => {
 };
 
 const components = {
-  Image
+  Image,
+  CallOut
 }
 
 
