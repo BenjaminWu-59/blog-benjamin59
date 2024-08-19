@@ -29,7 +29,6 @@ const MainNav = ()=> {
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/#skills" ? "text-foreground" : "text-foreground/60"
         )}
-        onClick={()=>{alert(pathname)}}
       >
         Skills
       </Link>
