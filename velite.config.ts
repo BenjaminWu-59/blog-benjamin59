@@ -37,17 +37,7 @@ export default defineConfig({
   mdx: {
     rehypePlugins: [
       rehypeSlug,
-      [rehypePrettyCode, { theme: "github-dark" }],
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-          properties: {
-            className: ["subheading-anchor"],
-            ariaLabel: "Link to section",
-          },
-        },
-      ],
+      [rehypePrettyCode, { theme: "github-dark" }]
     ],
     remarkPlugins: [],
   },  

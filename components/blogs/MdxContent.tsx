@@ -75,7 +75,22 @@ const MDXContent = ({ code }: MdxProps) => {
     <div>
       {headings.map((heading, index) => (
         <p key={index}>
-          <a href={`#${heading.text.replace(/\s+/g, "-").toLowerCase()}`}>
+          <a
+            href={`#${heading.text.replace(/\s+/g, "-").toLowerCase()}`}
+            onClick={(e) => {
+              e.preventDefault(); // 阻止默认的跳转行为
+              const targetId = heading.text.replace(/\s+/g, "-").toLowerCase();
+              const targetElement = document.getElementById(targetId);
+
+              if (targetElement) {
+                const yOffset = -100; // 偏移量，根据需要调整
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+                // 更新URL hash
+                window.history.pushState(null, "", `#${targetId}`);
+              }
+            }}
+          >
             {heading.text}
           </a>
           {heading.children.length > 0 && renderHeadings(heading.children)}
