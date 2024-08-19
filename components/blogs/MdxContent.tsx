@@ -1,11 +1,12 @@
 "use client";
-
+import { Post } from "#site/content";
 import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
 import CallOut from "./CallOut";
 import { useEffect, useState } from "react";
+import ArticleNav from "./ArticleNav";
 
-const useMDXComponent = (code: string) => {
+const useMDXComponent = ({ code = "" }) => {
   const fn = new Function(code);
   return fn({ ...runtime }).default;
 };
@@ -16,7 +17,7 @@ const components = {
 };
 
 interface MdxProps {
-  code: string;
+  post: Post;
 }
 
 // 类型定义，用于表示每个标题的结构
@@ -26,10 +27,10 @@ interface Heading {
   children: Heading[];
 }
 
-const MDXContent = ({ code }: MdxProps) => {
+const MDXContent = ({ post }: MdxProps) => {
   const [headingsStructure, setHeadingsStructure] = useState<Heading[]>([]);
 
-  const Component = useMDXComponent(code);
+  const Component = useMDXComponent({ code: post.body });
 
   useEffect(() => {
     const headings = Array.from(
@@ -47,7 +48,6 @@ const MDXContent = ({ code }: MdxProps) => {
         children: [],
       };
 
-      // 找到当前标题应放置的位置
       while (
         stack.length &&
         parseInt(stack[stack.length - 1].tagName[1], 10) >= level
@@ -56,61 +56,41 @@ const MDXContent = ({ code }: MdxProps) => {
       }
 
       if (stack.length === 0) {
-        // 没有父标题，将其作为顶级标题
         structure.push(newHeading);
       } else {
-        // 有父标题，将其放在父标题的 children 中
         stack[stack.length - 1].children.push(newHeading);
       }
 
-      // 将当前标题推入栈中
       stack.push(newHeading);
     });
 
     setHeadingsStructure(structure);
-    console.log(structure); // 打印标题结构
   }, []);
 
-  const renderHeadings = (headings: Heading[]) => (
-    <div>
-      {headings.map((heading, index) => (
-        <p key={index}>
-          <a
-            href={`#${heading.text.replace(/\s+/g, "-").toLowerCase()}`}
-            onClick={(e) => {
-              e.preventDefault(); // 阻止默认的跳转行为
-              const targetId = heading.text.replace(/\s+/g, "-").toLowerCase();
-              const targetElement = document.getElementById(targetId);
-
-              if (targetElement) {
-                const yOffset = -100; // 偏移量，根据需要调整
-                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-                // 更新URL hash
-                window.history.pushState(null, "", `#${targetId}`);
-              }
-            }}
-          >
-            {heading.text}
-          </a>
-          {heading.children.length > 0 && renderHeadings(heading.children)}
-        </p>
-      ))}
-    </div>
-  );
-
   return (
-    <div className="flex">
-      {/* 侧边栏 */}
-      <nav className="w-[30%]">
-        {renderHeadings(headingsStructure)}
+    <section className="flex prose dark:prose-invert p-10">
+      {/* side nav */}
+      <nav className="relative w-[20%] pr-5 border-r-2">
+        <div className="fixed  w-[20%] left-2.5%] top-[7%]">
+          <ArticleNav headings={headingsStructure} />
+        </div>
       </nav>
 
-      {/* 主要内容区域 */}
-      <div className="flex-grow p-6">
-        <Component components={components} />
+
+      <div className="flex-1 p-10">
+        {/* main content */}
+        <h1>{post.title}</h1>
+        {post.description ? (
+          <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
+        ) : null}
+        <hr className="my-4" />
+
+        <div className="w-[65%] flex-grow p-6">
+          <Component components={components} />
+        </div>
       </div>
-    </div>
+
+    </section>
   );
 };
 
