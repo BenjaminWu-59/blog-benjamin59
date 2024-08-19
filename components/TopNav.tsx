@@ -15,7 +15,7 @@ const MainNav = ()=> {
         <span className="text-3xl font-zain font-bold text-foreground/80">{siteConfig.name}</span>
       </Link>
       <Link
-        href="/#blogs"
+        href="/blog"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
           pathname === "/blog" ? "text-foreground" : "text-foreground/60"
@@ -27,8 +27,9 @@ const MainNav = ()=> {
         href="/#skills"
         className={cn(
           "text-lg font-medium transition-colors hover:text-primary hidden sm:inline-block",
-          pathname === "/about" ? "text-foreground" : "text-foreground/60"
+          pathname === "/#skills" ? "text-foreground" : "text-foreground/60"
         )}
+        onClick={()=>{alert(pathname)}}
       >
         Skills
       </Link>

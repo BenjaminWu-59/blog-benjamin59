@@ -63,15 +63,15 @@ const MDXContent = ({ post }: MdxProps) => {
 
       stack.push(newHeading);
     });
-
     setHeadingsStructure(structure);
+    console.log(stack)
   }, []);
 
   return (
     <section className="flex prose dark:prose-invert p-10">
       {/* side nav */}
-      <nav className="relative w-[20%] pr-5 border-r-2">
-        <div className="fixed  w-[20%] left-2.5%] top-[7%]">
+      <nav className="relative min-w-80 border-r-2">
+        <div className="fixed  max-w-80 left-2.5%] top-[8%]">
           <ArticleNav headings={headingsStructure} />
         </div>
       </nav>
@@ -79,7 +79,7 @@ const MDXContent = ({ post }: MdxProps) => {
 
       <div className="flex-1 p-10">
         {/* main content */}
-        <h1>{post.title}</h1>
+        <h1 id={post.title.replace(/\s+/g, "-").toLowerCase()}>{post.title}</h1>
         {post.description ? (
           <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
         ) : null}

@@ -13,9 +13,9 @@ const ArticleNav = ({ headings }: HeadingNavProps) => {
   const renderHeadings = (headings: Heading[]) => (
     <nav>
       {headings.map((heading, index) => (
-        <p key={index}>
+        <div key={index} className="py-2">
           <a
-            className="no-underline text-xl"
+            className="no-underline hover:underline text-xl"
             href={`#${heading.text.replace(/\s+/g, "-").toLowerCase()}`}
             onClick={(e) => {
               e.preventDefault();
@@ -36,7 +36,7 @@ const ArticleNav = ({ headings }: HeadingNavProps) => {
             {heading.text}
           </a>
           {heading.children.length > 0 && renderHeadings(heading.children)}
-        </p>
+        </div>
       ))}
     </nav>
   );
