@@ -34,7 +34,7 @@ const MDXContent = ({ post }: MdxProps) => {
 
   useEffect(() => {
     const headings = Array.from(
-      document.querySelectorAll("h1, h2, h3, h4, h5, h6")
+      document.querySelectorAll("h2, h3, h4, h5, h6")
     ) as HTMLHeadingElement[];
 
     const structure: Heading[] = [];
@@ -71,7 +71,7 @@ const MDXContent = ({ post }: MdxProps) => {
     <section className="flex prose dark:prose-invert p-10">
       {/* side nav */}
       <nav className="relative min-w-80 border-r-2">
-        <div className="fixed  max-w-80 left-2.5%] top-[8%]">
+        <div className="fixed max-w-80 left-2.5%] top-[8%]">
           <ArticleNav headings={headingsStructure} />
         </div>
       </nav>
