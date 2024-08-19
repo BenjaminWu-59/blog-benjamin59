@@ -108,7 +108,20 @@ const config = {
       boxShadow: {
         normal:"var(--shadow-normal)",
         darker: "box-shadow: 5px 5px 15px rgba(0, 0, 0, .25)"
-      }
+      },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: '100%', // 设置默认宽度为 100%
+            // 你也可以设置其他的宽度值，例如 '80ch' 或 '60%'
+          },
+        },
+        lg: {
+          css: {
+            maxWidth: '80%', // 例如，设置 lg 变体的宽度为 80%
+          },
+        },
+      }),
     },
   },
   plugins: [
