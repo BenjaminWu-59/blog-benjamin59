@@ -1,4 +1,4 @@
-import { Diet, FitnessAction, Book } from "@/config/fitness";
+import { Diet, FitnessAction } from "@/config/fitness";
 import Image from "next/image";
 import * as React from "react"
 import {
@@ -12,11 +12,10 @@ import {
 interface FitnessListProps {
   diets: Diet[];
   fitnessActions: FitnessAction[];
-  books: Book[];
 }
 
 
-const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = [], books = [] }) => {
+const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = [] }) => {
   return (
     <>
       <div>
@@ -120,23 +119,6 @@ const FitnessList: React.FC<FitnessListProps> = ({ diets = [], fitnessActions = 
             </div>
           </div>
         </div>
-      </div >
-
-
-      {/* 书籍或网站推荐 */}
-      < div className="my-10 grid grid-cols-4 gap-2">
-        {books.map((item, index) => (
-          <a
-            key={index}
-            target="_blank"
-            rel="noreferrer"
-            className="book-container p-10 mr-5 mb-5 group relative block overflow-hidden rounded-xl bg-slate-50 shadow-md transition-all duration-500 hover:bg-[#063142]"
-          >
-            <div className="book">
-              <img src={item.img} />
-            </div>
-          </a>
-        ))}
       </div >
     </>
   )

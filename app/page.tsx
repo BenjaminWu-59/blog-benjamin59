@@ -5,6 +5,7 @@ import BolgList from "@/components/pages/BlogList";
 import SkillList from "@/components/pages/CodeList";
 import ProjectList from "@/components/pages/ProjectList";
 import FitnessList from "@/components/pages/FitnessList";
+import BookList from "@/components/pages/BookList";
 import ZoomIn from '@/components/ZoomIn';
 import { testProjectList } from "@/config/projects";
 import { testSkillList } from "@/config/skills";
@@ -63,8 +64,11 @@ const Home: React.FC = () => {
         <FitnessList
           diets={testDietList}
           fitnessActions={testFitnessActions}
-          books={testBookList}
         />
+      </section>
+
+      <section className="px-4 lg:px-16 xl:px-32 2xl:px-44 py-10">
+        <BookList books={testBookList}/>
       </section>
 
       <section className="w-full px-4 lg:px-14 xl:px-28 2xl:px-40 relative z-10 my-36"
