@@ -11,7 +11,7 @@ const MainNav = ()=> {
   return (
     <nav className="flex items-center space-x-4 lg:space-x-6 justify-center">
       <Link href="/" className="mr-2 flex items-center justify-center space-x-3">
-        <Icons.logo className="h-8 w-8 rounded-3xl" />
+        <img src="/icon.png" className="h-8 w-8 rounded-3xl"/>
         <span className="text-3xl font-zain font-bold text-foreground/80">{siteConfig.name}</span>
       </Link>
       <Link
